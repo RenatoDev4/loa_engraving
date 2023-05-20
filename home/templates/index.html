@@ -1,0 +1,646 @@
+{% load custom_filters %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% for character in character_class %}
+    <title>Build gerada - {{ character }}</title>
+    {% endfor %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/css/resultado_style.css' %}">
+    <script src="{% static 'home/js/resultado_js.js' %}"></script>
+</head>
+
+<body>
+
+  {% for character in character_class %}
+  <img id="class-bg" src="{% static 'home/background_class/'|add:character|add:'.png' %}" alt="{{ character }}">
+  {% endfor %}
+
+  <nav class="menu-container">
+    <ul class="menu">
+      <div class="left-container">
+        <div class="left-elements">
+          <span class="edit-text">Você pode editar sua build conforme necessidade:<br></span>
+          <div class="button" id="button-5">
+            <div id="translate"></div>      
+            <a id="editButton" onclick="toggleEdit()">Editar</a>
+          </div>
+        </div>
+        
+        <div class="right-elements">
+          <span class="rebuild-text">Não gostou da build? Nós re-calculamos ela para você:<br></span>
+          <div class="button button-rebuild" id="button-5">
+            <div id="translate"></div> 
+            <a href="#" onclick="location.reload();">Rebuild</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="position-right">
+        <span class="rebuild-text">Voltar para o menu de seleção de skills:<br></span>
+        <div class="button button-homepage" id="button-5">
+          <div id="translate"></div> 
+          <a href="/generate/">Voltar</a>
+        </div>
+      </div>
+    </ul>
+  </nav>
+
+  <div class="points-distribution">
+    <h3 class="points-text">Distribuição de pontos</h3>
+    <ul id="pointsDistribution">
+      {% for ability, points in points_distribution.items %}
+      <li>
+        <div class="pointsContainer">
+          <img src="{% static 'home/images_engravings/'|add:ability|add:'.jpg' %}" alt="{{ ability }}">
+          <span id="abilityPoints_{{ ability|slugify }}"></span>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <div class="content-wrapper">
+    <h3 class="centered-text">Acessórios</h3>
+    <ul class="accessories-list">
+      <li>
+        <div>
+          <img class="accessories_img" src="{% static 'home/itens_icon/acc_204.png' %}" alt="">
+        </div>
+        {% for point, ability in necklace_points|zip_lists:necklace_abilities %}
+        <div class="abilityGroup">
+          <div class="abilityContainer {% if editing %}editing{% endif %}">
+            <div class="imgContainer">
+              <img src="{% static 'home/images_engravings/'|add:ability|add:'.jpg' %}" alt="{{ ability }}">
+            </div>
+            <div class="pointContainer">
+              <input type="text" class="editablePoint small-input revertable" value="{{ point }}" readonly oninput="validateInput(this, 3, 6)"> -&nbsp;
+            </div>
+            <div class="abilityContainer">
+              <select class="editableAbility" disabled>
+                <option selected value="{{ ability }}">{{ ability }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </li>
+    </ul>
+    <select id="abilitiesList" style="display: none;">
+      {% for ability in abilities %}
+      <option value="{{ ability }}">{{ ability }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <ul class="accessories-list">
+    <li>
+      <div>
+        <img class="accessories_img" src="{% static 'home/itens_icon/acc_104.png' %}" alt="">
+      </div>
+      {% for point, ability in earrings1_points|zip_lists:earrings1_abilities %}
+      <div class="abilityGroup">
+        <div class="abilityContainer {% if editing %}editing{% endif %}">
+          <div class="imgContainer">
+            <img src="{% static 'home/images_engravings/'|add:ability|add:'.jpg' %}" alt="{{ ability }}">
+          </div>
+          <div class="pointContainer">
+            <input type="text" class="editablePoint small-input revertable" value="{{ point }}" readonly oninput="validateInput(this, 3, 6)"> -&nbsp;
+          </div>
+          <div class="abilityContainer">
+            <select class="editableAbility" disabled>
+              <option selected value="{{ ability }}">{{ ability }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </li>
+  </ul>
+  
+  <ul class="accessories-list">
+    <li>
+      <div>
+        <img class="accessories_img" src="{% static 'home/itens_icon/acc_104.png' %}" alt="">
+      </div>
+      {% for point, ability in earrings2_points|zip_lists:earrings2_abilities %}
+      <div class="abilityGroup">
+        <div class="abilityContainer {% if editing %}editing{% endif %}">
+          <div class="imgContainer">
+            <img src="{% static 'home/images_engravings/'|add:ability|add:'.jpg' %}" alt="{{ ability }}">
+          </div>
+          <div class="pointContainer">
+            <input type="text" class="editablePoint small-input revertable" value="{{ point }}" readonly oninput="validateInput(this, 3, 6)"> -&nbsp;
+          </div>
+          <div class="abilityContainer">
+            <select class="editableAbility" disabled>
+              <option selected value="{{ ability }}">{{ ability }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </li>
+  </ul>
+  
+  <ul class="accessories-list">
+    <li>
+      <div>
+        <img class="accessories_img" src="{% static 'home/itens_icon/acc_11.png' %}" alt="">
+      </div>
+      {% for point, ability in rings1_points|zip_lists:rings1_abilities %}
+      <div class="abilityGroup">
+        <div class="abilityContainer {% if editing %}editing{% endif %}">
+          <div class="imgContainer">
+            <img src="{% static 'home/images_engravings/'|add:ability|add:'.jpg' %}" alt="{{ ability }}">
+          </div>
+          <div class="pointContainer">
+            <input type="text" class="editablePoint small-input revertable" value="{{ point }}" readonly oninput="validateInput(this, 3, 6)"> -&nbsp;
+          </div>
+          <div class="abilityContainer">
+            <select class="editableAbility" disabled>
+              <option selected value="{{ ability }}">{{ ability }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </li>
+  </ul>
+  
+  <ul class="accessories-list">
+    <li>
+      <div>
+        <img class="accessories_img" src="{% static 'home/itens_icon/acc_11.png' %}" alt="">
+      </div>
+      {% for point, ability in rings2_points|zip_lists:rings2_abilities %}
+      <div class="abilityGroup">
+        <div class="abilityContainer {% if editing %}editing{% endif %}">
+          <div class="imgContainer">
+            <img src="{% static 'home/images_engravings/'|add:ability|add:'.jpg' %}" alt="{{ ability }}">
+          </div>
+          <div class="pointContainer">
+            <input type="text" class="editablePoint small-input revertable" value="{{ point }}" readonly oninput="validateInput(this, 3, 6)"> -&nbsp;
+          </div>
+          <div class="abilityContainer">
+            <select class="editableAbility" disabled>
+              <option selected value="{{ ability }}">{{ ability }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </li>
+  </ul>
+  
+  <h3 class="centered-text">Habidades da pedra</h3>
+  <ul class="accessories-list">
+    <li>
+      <div>
+        <img class="accessories_img" src="{% static 'home/ability_stone/abilitystone.png' %}" alt="">
+      </div>
+      {% for point, ability in ability_stone_points|zip_lists:ability_stone_abilities %}
+      <div class="abilityGroup">
+        <div class="abilityContainer {% if editing %}editing{% endif %}">
+          <div class="imgContainer">
+            <img src="{% static 'home/images_engravings/'|add:ability|add:'.jpg' %}" alt="{{ ability }}">
+          </div>
+          <div class="pointContainer">
+            <input type="text" class="editablePoint small-input revertable" value="{{ point }}" readonly oninput="validateInput(this, 3, 12)"> -&nbsp;
+          </div>
+          <div class="abilityContainer">
+            <select class="editableAbility" disabled>
+              <option selected value="{{ ability }}">{{ ability }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </li>
+  </ul>
+  
+  <h3 class="centered-text">Slots de Engraving</h3>
+  <ul class="accessories-list">
+    <li>
+      <div>
+        <img class="accessories_img" src="{% static 'home/engraving/engraving.jpg' %}" alt="">
+      </div>
+      <div class="abilityGroup">
+        <div class="abilityContainer">
+          <div class="imgContainer">
+            <img src="{% static 'home/images_engravings/'|add:engraving_slot1_abilities|add:'.jpg' %}" alt="{{ engraving_slot1_abilities }}">
+          </div>
+          <div class="pointContainer">
+            <input type="text" class="editablePoint small-input revertable" value="{{ engraving_slots_points.0 }}" readonly oninput="validateInput(this, 3, 12)"> -&nbsp;
+          </div>
+          <div class="abilityContainer">
+            <select class="editableAbility" disabled>
+              <option selected value="{{ engraving_slot1_abilities }}">{{ engraving_slot1_abilities }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="abilityGroup">
+        <div class="abilityContainer">
+          <div class="imgContainer">
+            <img src="{% static 'home/images_engravings/'|add:engraving_slot2_abilities|add:'.jpg' %}" alt="{{ engraving_slot2_abilities }}">
+          </div>
+          <div class="pointContainer">
+            <input type="text" class="editablePoint small-input revertable" value="{{ engraving_slots_points.1 }}" readonly oninput="validateInput(this, 3, 12)"> -&nbsp;
+          </div>
+          <div class="abilityContainer">
+            <select class="editableAbility" disabled>
+              <option selected value="{{ engraving_slot2_abilities }}">{{ engraving_slot2_abilities }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  
+  </div>
+
+<script>
+  window.onload = function() {
+    var points = document.getElementsByClassName('editablePoint');
+    var abilities = document.getElementsByClassName('editableAbility');
+  
+    for (var i = 0; i < points.length; i++) {
+      var pointValue = points[i].value;
+      points[i].style.display = 'none';
+      var pointText = document.createElement('span');
+      pointText.textContent = pointValue;
+      points[i].parentNode.insertBefore(pointText, points[i]);
+    }
+  
+    for (var i = 0; i < abilities.length; i++) {
+      var abilityValue = abilities[i].options[abilities[i].selectedIndex].text;
+      abilities[i].style.display = 'none';
+      var abilityText = document.createElement('span');
+      abilityText.textContent = abilityValue;
+      abilities[i].parentNode.insertBefore(abilityText, abilities[i]);
+    }
+
+    var abilitiesSum = sumAbilities();
+    updatePointsDistribution(abilitiesSum);
+  }
+
+document.getElementById('editButton').addEventListener('click', function() {
+  toggleEdit();
+
+  var points = document.getElementsByClassName('editablePoint');
+  var abilities = document.getElementsByClassName('editableAbility');
+
+  for (var i = 0; i < points.length; i++) {
+    if (points[i].style.display === 'none') {
+      if (points[i].previousSibling) {
+        var pointText = points[i].previousSibling;
+        points[i].parentNode.removeChild(pointText);
+      }
+      points[i].style.display = 'inline-block';
+    } else {
+      var pointValue = points[i].value;
+      points[i].style.display = 'none';
+      var pointText = document.createElement('span');
+      pointText.textContent = pointValue;
+      points[i].parentNode.insertBefore(pointText, points[i]);
+    }
+  }
+
+  for (var i = 0; i < abilities.length; i++) {
+    if (abilities[i].style.display === 'none') {
+      if (abilities[i].previousSibling) {
+        var abilityText = abilities[i].previousSibling;
+        abilities[i].parentNode.removeChild(abilityText);
+      }
+      abilities[i].style.display = 'flex'; // Aqui mudamos para flex
+    } else {
+      var abilityValue = abilities[i].options[abilities[i].selectedIndex].text;
+      abilities[i].style.display = 'none';
+      var abilityText = document.createElement('span');
+      abilityText.textContent = abilityValue;
+      abilities[i].parentNode.insertBefore(abilityText, abilities[i]);
+    }
+  }
+    
+    // Cria uma lista de habilidades selecionadas
+    var selectedAbilities = [];
+    for (var i = 0; i < abilities.length; i++) {
+      selectedAbilities.push(abilities[i].options[abilities[i].selectedIndex].text);
+    }
+  
+    for (var i = 0; i < points.length; i++) {
+        if (points[i].hasAttribute('readonly')) {
+            points[i].removeAttribute('readonly');
+        } else {
+            points[i].setAttribute('readonly', true);
+        }
+    }
+
+      
+    // Faça uma requisição para a rota '/get_abilities/'
+    fetch('/get_abilities/')
+        .then(response => response.json())
+        .then(data => {
+            for (var i = 0; i < abilities.length; i++) {
+                if (abilities[i].hasAttribute('disabled')) {
+                    abilities[i].removeAttribute('disabled');
+  
+                    // Obtenha a habilidade selecionada atualmente
+                    var currentSelectedAbility = abilities[i].options[abilities[i].selectedIndex].text;
+  
+                    for (var j = 0; j < data.abilities.length; j++) {
+                        // Verifica se a habilidade está na lista de habilidades selecionadas
+                        // e se é diferente da habilidade selecionada atualmente
+                        if (selectedAbilities.includes(data.abilities[j]) && data.abilities[j] !== currentSelectedAbility) {
+                          var option = document.createElement('option');
+                          option.value = data.abilities[j];
+                          option.text = data.abilities[j];
+                          abilities[i].add(option);
+                        }
+                    }
+                } else {
+                    abilities[i].setAttribute('disabled', true);
+                    while (abilities[i].options.length > 1) {
+                        abilities[i].remove(1);
+                    }
+                }
+            }
+        });
+  });
+
+  
+  // Variável global para armazenar o estado de edição
+  var isEditMode = false;
+
+  function toggleEdit() {
+    var editButton = document.getElementById('editButton');
+  
+    if (!isEditMode) {
+      // Modo de edição
+      console.log('Switching to edit mode. Current button text:', editButton.textContent);
+      editButton.textContent = 'Salvar Edição';
+      console.log('Button text updated:', editButton.textContent);
+      isEditMode = true;
+      enableFields();
+    } else {
+      // Modo de visualização
+      console.log('Switching to view mode. Current button text:', editButton.textContent);
+      editButton.textContent = 'Editar';
+      console.log('Button text updated:', editButton.textContent);
+      isEditMode = false;
+      disableFields();
+      updatePointsDistribution(sumAbilities());
+    }
+  
+    // Atualiza as opções dos campos 'Select'
+    updateSelectOptions();
+
+    
+  }
+
+  
+
+  function updateSelectOptions() {
+      var abilities = document.getElementsByClassName('editableAbility');
+    
+      for (var i = 0; i < abilities.length; i++) {
+        var abilitySelect = abilities[i];
+        var selectedAbility = abilitySelect.options[abilitySelect.selectedIndex].text;
+        var options = abilitySelect.options;
+
+        // Guarda as habilidades selecionadas
+        var selectedOptions = [];
+        for (var j = 0; j < options.length; j++) {
+          if (options[j].selected) {
+            selectedOptions.push(options[j].value);
+          }
+        }
+
+        // Remove todas as opções
+        while (abilitySelect.options.length > 0) {
+          abilitySelect.remove(0);
+        }
+
+        // Adiciona de volta apenas as habilidades selecionadas
+        for (var j = 0; j < selectedOptions.length; j++) {
+          var option = document.createElement('option');
+          option.value = selectedOptions[j];
+          option.text = selectedOptions[j];
+          abilitySelect.add(option);
+        }
+
+        // Mantém a habilidade atualmente selecionada
+        for (var j = 0; j < abilitySelect.options.length; j++) {
+          if (abilitySelect.options[j].text === selectedAbility) {
+            abilitySelect.selectedIndex = j;
+            break;
+          }
+        }
+      }
+  }
+  
+  function optionExists(optionText, options) {
+    for (var i = 0; i < options.length; i++) {
+      if (options[i].text === optionText) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  // Função para habilitar os campos de edição
+  function enableFields() {
+    var points = document.getElementsByClassName('editablePoint');
+    var abilities = document.getElementsByClassName('editableAbility');
+
+    for (var i = 0; i < points.length; i++) {
+      points[i].removeAttribute('readonly');
+      points[i].classList.remove('revertable');
+    }
+
+    for (var i = 0; i < abilities.length; i++) {
+      abilities[i].removeAttribute('disabled');
+    }
+  }
+
+  // Função para desabilitar os campos de edição
+  function disableFields() {
+    var points = document.getElementsByClassName('editablePoint');
+    var abilities = document.getElementsByClassName('editableAbility');
+
+    for (var i = 0; i < points.length; i++) {
+      points[i].setAttribute('readonly', true);
+      points[i].classList.add('revertable');
+    }
+
+    for (var i = 0; i < abilities.length; i++) {
+      abilities[i].setAttribute('disabled', true);
+    }
+  }
+
+  function validateInput(input, minValue, maxValue) {
+    var value = parseInt(input.value);
+    if (isNaN(value) || value < minValue || value > maxValue) {
+      input.value = ""; // Limpa o campo se o número for inválido
+    } else {
+      input.value = value.toString(); // Atualiza o valor do campo com o número válido
+    }
+  }
+
+// Evento 'blur' para reverter para o valor original quando o campo estiver vazio
+var originalValues = []; // Armazena os valores originais
+var revertableInputs = document.getElementsByClassName("revertable");
+for (var i = 0; i < revertableInputs.length; i++) {
+  // Armazena o valor original ao carregar a página
+  originalValues[i] = revertableInputs[i].value;
+
+  revertableInputs[i].addEventListener("blur", function () {
+    if (this.value === "") {
+      var index = Array.prototype.indexOf.call(revertableInputs, this);
+      this.value = originalValues[index];
+    }
+  });
+}
+
+
+
+  // Função para obter o valor do cookie CSRF
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+  }
+  
+  // Obtenha o CSRF token
+  var csrftoken = getCookie('csrftoken');
+
+  
+// Função para atribuir nível com base nos pontos
+function assignLevel(points) {
+  if (points >= 15) {
+      return 3;
+  } else if (points >= 6) {
+      return 2;
+  } else if (points >= 5) {
+      return 1;
+  } else {
+      return 0; // ou você pode retornar qualquer valor padrão para pontos menores que 5
+  }
+}
+
+function updatePointsDistribution(abilitiesSum) {
+  var pointsDistribution = document.getElementById('pointsDistribution');
+
+  // Cria novos elementos li com os pontos atualizados
+  for (var ability in abilitiesSum) {
+    var existingLi = document.querySelector(`#pointsDistribution li img[alt="${ability}"]`);
+    if (existingLi) {
+      var li = existingLi.parentElement;
+      var level = assignLevel(abilitiesSum[ability]);
+
+      // Atualiza o texto do ponto com o nome da habilidade
+      var span = li.querySelector('span');
+      var abilityName = getAbilityName(ability);
+      var levelText = document.createElement('span');
+      levelText.textContent = 'Engraving Level ' + level;
+
+      // Define a cor do texto "Engraving Level" com base no nível
+      if (level === 3) {
+        levelText.style.color = 'orange'; // Nível 3 - laranja
+      } else if (level === 2) {
+        levelText.style.color = 'purple'; // Nível 2 - roxo
+      } else if (level === 1) {
+        levelText.style.color = 'darkblue'; // Nível 1 - azul escuro
+      }
+
+      // Substitui o conteúdo do ponto com os elementos atualizados
+      span.innerHTML = abilityName + ' - '  + abilitiesSum[ability] + ' pontos' + ' - ';
+      span.appendChild(levelText);
+    }
+  }
+}
+
+// Função auxiliar para obter o nome da habilidade com base no código
+function getAbilityName(ability) {
+  // Mapeie o código da habilidade para o nome correspondente
+  var abilityNames = {
+  };
+
+  // Verifique se há um nome correspondente na tabela de mapeamento
+  if (ability in abilityNames) {
+    return abilityNames[ability];
+  }
+
+  // Caso contrário, retorne o próprio código de habilidade
+  return ability;
+}
+
+  // Função para somar as habilidades
+  function sumAbilities() {
+    var points = document.getElementsByClassName('editablePoint');
+    var abilities = document.getElementsByClassName('editableAbility');
+    var abilitiesSum = {};
+  
+    for (var i = 0; i < points.length; i++) {
+      var point = parseInt(points[i].value);
+      var ability = abilities[i].options[abilities[i].selectedIndex].text;
+  
+      if (abilitiesSum.hasOwnProperty(ability)) {
+        abilitiesSum[ability] += point;
+      } else {
+        abilitiesSum[ability] = point;
+      }
+    }
+  
+    // Retorne o objeto com as habilidades somadas
+    return abilitiesSum;
+  }
+
+  function changeAbilityImage(event) {
+    var selectElement = event.target;
+    var ability = selectElement.value;
+    
+    // Pegamos o container de habilidades que engloba tanto a imagem quanto o select
+    var abilityContainer = selectElement.parentElement.parentElement;
+    
+    // Buscamos a imagem dentro do container de habilidades
+    var imgElement = abilityContainer.querySelector('img');
+
+    if (imgElement && imgElement.tagName === 'IMG') {
+        var basePath = "{% static 'home/images_engravings/' %}";
+        imgElement.src = basePath + ability + '.jpg';
+    } else {
+        console.log('Elemento de imagem não encontrado ou não é uma tag IMG');
+    }
+}
+
+// Adicione o evento de mudança a todos os elementos select das habilidades
+var abilitySelects = document.getElementsByClassName('editableAbility');
+if (abilitySelects.length > 0) {
+    for (var i = 0; i < abilitySelects.length; i++) {
+        abilitySelects[i].addEventListener('change', changeAbilityImage);
+    }
+} else {
+    console.log('Nenhum elemento encontrado com a classe "editableAbility"');
+}
+
+
+</script>
+
+
+</body>
+</html>

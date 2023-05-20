@@ -1,0 +1,202 @@
+{% load static %}
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <script src="{% static 'home/js/javascript.js' %}"></script>
+</head>
+
+<body>
+    <div class="nav-wrapper">
+        <nav class="menu-container">
+          <ul class="menu">
+            <div class="left-container">
+              <div class="left-elements">
+                <span class="gerador-build-text">Quer ser avisado quando tiver Rapport Lendario ou Wei pelo Telegram?<br></span>
+                <div class="button button-lostmerchant" id="button-5">
+                  <div id="translate"></div> 
+                  <a href="#">Lost Merchant Bot</a>
+                </div>
+              </div>
+      
+              <div class="right-elements">
+                <span class="gerador-build-text">Tem alguma duvída ou sugestão? Mande uma mensagem!<br></span>
+                <div class="button button-duvidas" id="button-5">
+                  <div id="translate"></div> 
+                  <a href="#">Duvídas e Sugestões?</a> 
+                </div>
+              </div>
+            </div>
+          </ul>
+        </nav>
+      </div>
+
+    <div class="botao-container">
+      <button id="help-button" type="button" ontouchstart="">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" height="100" width="100" class="kf1">
+    
+            <path id="dot" d="m 48.022097,82.90284 c 1.192314,-0.02147 2.173956,-0.831358 2.185365,-1.947038 0.01141,-1.11568 -0.973891,-2.270335 -2.185365,-2.278068 -1.247604,-0.008 -2.049902,1.054459 -2.03911,2.278072 0.01079,1.223613 1.240139,1.949581 1.984264,1.946573 C 57.764626,82.851586 72.086342,84.492783 81.015625,76 91.923664,65.625191 88.415613,45.865135 71.020037,29.046254 L 30.007844,69.947962 c -3.245469,3.236726 -4.128897,8.694076 0.573223,11.799844 4.30204,2.841515 11.355956,1.079354 17.44103,1.155034 z" style="opacity:1;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+            <path id="qmark" d="M 29.387754,29.397748 70.99794,71.030719 C 85.063599,67.076558 71.518598,50.054823 65.044194,64.589689 61.518139,72.50559 47.419888,77.236862 48,66.0625 L 47.97278,56.999069 C 52.628822,58.147585 74.845345,50.150007 66.202876,27.78672 61.644451,15.991323 38.55285,10.038018 29.387754,29.397748 Z" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4	;stroke-opacity:1" />
+        </svg>
+    
+    </button>
+
+      <label id="btnExplanation" class="botao-explicacao">Duvídas de como usar nossa ferramenta?</label>
+      <div id="tooltip" class="hidden">
+          <h2 class="h2-custom">Bem-vindo(a) ao nosso aplicativo de criação de builds de engraves para o jogo Lost Ark!</h2>
+          <p>Com a nossa ferramenta, você poderá gerar automaticamente uma build de engraves ideal para o seu personagem, distribuindo os pontos de forma inteligente em acessórios, habilidades de pedra e slots de engraves. Permita-me explicar como funciona:</p>
+          <h3 class="h3-custom">Passo 1: Escolha sua classe</h3>
+          <p>Para começar, selecione a sua classe do jogo.</p>
+          <h3 class="h3-custom">Passo 2: Escolha os engraves de combate e de classe</h3>
+          <p>Após selecionar sua classe, você poderá escolher de 4 a 5 engraves de combate e 1 de classe. Esses engraves fornecerão atributos adicionais ao seu personagem. Tenha em mente as sinergias entre a sua classe e os engraves selecionados para maximizar o desempenho do seu personagem.</p>
+          <h3 class="h3-custom">Passo 3: Use o filtro para um cálculo mais preciso (opcional)</h3>
+          <p>Para uma precisão ainda maior na distribuição dos pontos de engrave, oferecemos um filtro à direita da tela. Com ele, você pode definir critérios específicos, como priorizar um determinado atributo ou equilibrar os pontos de engrave entre diferentes áreas do seu personagem. Essa opção é totalmente opcional, mas pode ser útil para aprimorar ainda mais sua build.</p>
+          <h3 class="h3-custom">Passo 4: Gere sua build de engraves</h3>
+          <p>Uma vez que você tenha feito suas escolhas de classe, engraves de combate e engrave de classe, é hora de gerar sua build de engraves. Nosso sistema irá distribuir automaticamente os pontos de engrave nos acessórios, ability stones e slots disponíveis, chega de sofrer para criar builds né?</p>
+          <h3 class="h3-custom">Passo 5: Edite sua build (opcional)</h3>
+          <p>Após a geração da build, você terá a opção de fazer edições, caso não tenha ficado completamente satisfeito com o resultado. Você pode ajustar manualmente os pontos de engrave em cada acessório, ability stone ou slot para personalizar a build de acordo com suas preferências.</p>
+          <div style="color: #00B4FF;">
+            <p>Nosso objetivo é facilitar e agilizar o processo de criação de builds de engraves para o Lost Ark, permitindo que você aproveite ao máximo o seu personagem!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+<form method="POST" id="abilitiesForm">
+        {% csrf_token %}
+    
+<div class="flex-container">
+    <div class="class-selection">
+        <label for="character_class" class="character_class_label section-title">Escolha sua classe:</label>
+        <div class="character_classes">
+            {% for character in character_class %}
+            <input type="checkbox" id="{{ character }}" name="character_class" value="{{ character }}" class="abilityCheckbox">
+            <label for="{{ character }}" class="character_classContainer">
+                <div class="frame"></div>
+                <div class="characterContent">
+                    <img src="{% static 'home/class_icons/'|add:character|add:'.png' %}" alt="{{ character }}">
+                    <span>{{ character }}</span>
+                </div>
+            </label>
+            {% endfor %}
+        </div>
+
+        <br><br>
+        <label for="abilities" class="abilities_label section-title">Escolha as habilidades de combat:</label>
+        <div class="abilities">
+            {% for ability in abilities %}
+            <input type="checkbox" id="{{ ability }}" name="abilities" value="{{ ability }}" class="abilityCheckbox">
+            <div class="abilityContainer">
+                <label for="{{ ability }}" class="abilityContent">
+                    <img src="{% static 'home/images_engravings/'|add:ability|add:'.jpg' %}" alt="{{ ability }}">
+                    {{ ability }}
+                </label>
+            </div>
+        {% endfor %}       
+        </div>
+        <br><br>
+        <div class="class-abilities-container">
+            <label for="class_abilities" class="class_abilities_label section-title">Escolha as habilidades de classe:</label>
+            <div class="class_abilities">
+                {% for class_ability in class_abilities %}
+                <input type="checkbox" id="{{ class_ability }}" name="class_abilities" value="{{ class_ability }}" class="abilityCheckbox">
+                <div class="abilityContainer">
+                    <label for="{{ class_ability }}" class="abilityContent">
+                        <img src="{% static 'home/images_engravings/'|add:class_ability|add:'.jpg' %}" alt="{{ class_ability }}">
+                        {{ class_ability }}
+                    </label>
+                </div>
+            {% endfor %}           
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-section">
+        <h1>Filtros:</h1>
+        <div class="filter-options">
+            <div class="option">
+                <input class="filter-checkbox" type="checkbox" id="stoneCheck" name="stoneCheck" value="True">
+                <label for="stoneCheck"><span class="custom-checkbox"></span> Usar Pedra 9,7 ou 7,9</label>
+            </div>
+            <div class="option">
+                <input class="filter-checkbox" type="checkbox" id="ancientCheck" name="ancientCheck" value="True">
+                <label for="ancientCheck"><span class="custom-checkbox"></span> Personagem usa itens Ancient?</label>
+            </div>
+            <div class="option">
+                <input class="filter-checkbox" type="checkbox" id="engraving12x12Check" name="engraving12x12Check" value="True">
+                <label for="engraving12x12Check"><span class="custom-checkbox"></span> Priorizar os dois engravings slots no 12</label>
+            </div>
+        </div>
+        <button class="filter-button">Gerar build</button>
+        
+    </div>
+
+    </form>
+
+    <script>
+        // Adicione o evento de click para todos os checkboxes de 'character_class'
+        document.querySelectorAll('.character_classes .abilityCheckbox').forEach(function(checkbox) {
+            checkbox.addEventListener('click', function() {
+                // Verifica se apenas um checkbox de 'character_class' foi selecionado
+                if(document.querySelectorAll('.character_classes .abilityCheckbox:checked').length === 1) {
+                    // Se sim, rola para o rótulo 'Escolha as habilidades de combat:'
+                    document.querySelector('label[for="abilities"]').scrollIntoView({behavior: 'smooth'});
+                }
+            });
+        });
+    
+        // Adicione o evento de click para todos os checkboxes de 'abilities'
+        document.querySelectorAll('.abilities .abilityCheckbox').forEach(function(checkbox) {
+            checkbox.addEventListener('click', function() {
+                // Verifica se quatro ou cinco checkboxes de 'abilities' foram selecionados
+                let abilitiesSelected = document.querySelectorAll('.abilities .abilityCheckbox:checked').length;
+                if(abilitiesSelected === 4 || abilitiesSelected === 5) {
+                    // Se sim, rola para o rótulo 'Escolha as habilidades de classe:'
+                    document.querySelector('label[for="class_abilities"]').scrollIntoView({behavior: 'smooth'});
+                }
+            });
+        });
+    
+        // Adicione o evento de click para todos os checkboxes de 'class_abilities'
+        document.querySelectorAll('.class_abilities .abilityCheckbox').forEach(function(checkbox) {
+            checkbox.addEventListener('click', function() {
+                // Verifica se apenas um checkbox de 'class_abilities' foi selecionado
+                if(document.querySelectorAll('.class_abilities .abilityCheckbox:checked').length === 1) {
+                    // Se sim, rola para o topo da página
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                    
+                    // Faz o botão "Gerar build" pulsar
+                    document.querySelector('.filter-button').classList.add('pulsing');
+                }
+            });
+        });
+
+        // Nuuvem botão explicar
+        const btnExplanation = document.getElementById("btnExplanation");
+        const tooltip = document.getElementById("tooltip");
+        const helpButton = document.querySelector("#help-button");
+        
+        let clicked = false;
+        let flipped = false;
+        
+        helpButton.onclick = () => {
+          clicked ^= 1;
+          flipped ^= 1 & clicked;
+        
+          const nextClass = flipped ? "kf3" : "kf1";
+          helpButton.className = clicked ? "kf2" : nextClass;
+        
+          if (clicked) {
+            tooltip.classList.remove("hidden");
+          } else {
+            tooltip.classList.add("hidden");
+          }
+        };
+
+
+    </script>
+
+</body>
