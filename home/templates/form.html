@@ -16,7 +16,7 @@
                 <span class="gerador-build-text">Quer ser avisado quando tiver Rapport Lendario ou Wei pelo Telegram?<br></span>
                 <div class="button button-lostmerchant" id="button-5">
                   <div id="translate"></div> 
-                  <a href="#">Lost Merchant Bot</a>
+                  <a href="/merchantbot/">Lost Merchant Bot</a>
                 </div>
               </div>
       
@@ -24,7 +24,7 @@
                 <span class="gerador-build-text">Tem alguma duvída ou sugestão? Mande uma mensagem!<br></span>
                 <div class="button button-duvidas" id="button-5">
                   <div id="translate"></div> 
-                  <a href="#">Duvídas e Sugestões?</a> 
+                  <a href="/duvidas/">Duvídas e Sugestões?</a> 
                 </div>
               </div>
             </div>
@@ -51,6 +51,9 @@
           <p>Para começar, selecione a sua classe do jogo.</p>
           <h3 class="h3-custom">Passo 2: Escolha os engraves de combate e de classe</h3>
           <p>Após selecionar sua classe, você poderá escolher de 4 a 5 engraves de combate e 1 de classe. Esses engraves fornecerão atributos adicionais ao seu personagem. Tenha em mente as sinergias entre a sua classe e os engraves selecionados para maximizar o desempenho do seu personagem.</p>
+          <div style="color: #FF0000;">
+          <p>*Caso sejam selecionadas 6 habilidades, a ultima selecionada será o sexto engrave.</p>
+          </div>
           <h3 class="h3-custom">Passo 3: Use o filtro para um cálculo mais preciso (opcional)</h3>
           <p>Para uma precisão ainda maior na distribuição dos pontos de engrave, oferecemos um filtro à direita da tela. Com ele, você pode definir critérios específicos, como priorizar um determinado atributo ou equilibrar os pontos de engrave entre diferentes áreas do seu personagem. Essa opção é totalmente opcional, mas pode ser útil para aprimorar ainda mais sua build.</p>
           <h3 class="h3-custom">Passo 4: Gere sua build de engraves</h3>
@@ -60,10 +63,14 @@
           <div style="color: #00B4FF;">
             <p>Nosso objetivo é facilitar e agilizar o processo de criação de builds de engraves para o Lost Ark, permitindo que você aproveite ao máximo o seu personagem!</p>
           </div>
+          <div style="color: red">
+            <p>* Nossa ferramenta está em fase de testes beta. Se você encontrar qualquer bug, pedimos que nos reporte para que possamos corrigi-lo.</p>
+          </div>
         </div>
       </div>
     </div>
-    
+
+
 
 <form method="POST" id="abilitiesForm">
         {% csrf_token %}
@@ -102,7 +109,7 @@
             <label for="class_abilities" class="class_abilities_label section-title">Escolha as habilidades de classe:</label>
             <div class="class_abilities">
                 {% for class_ability in class_abilities %}
-                <input type="checkbox" id="{{ class_ability }}" name="class_abilities" value="{{ class_ability }}" class="abilityCheckbox">
+                <input type="checkbox" id="{{ class_ability }}" name="class_abilities" value="{{ class_ability }}" class="abilityCheckbox" id="classAbilitiesCheckbox">
                 <div class="abilityContainer">
                     <label for="{{ class_ability }}" class="abilityContent">
                         <img src="{% static 'home/images_engravings/'|add:class_ability|add:'.jpg' %}" alt="{{ class_ability }}">
@@ -119,17 +126,21 @@
         <div class="filter-options">
             <div class="option">
                 <input class="filter-checkbox" type="checkbox" id="stoneCheck" name="stoneCheck" value="True">
-                <label for="stoneCheck"><span class="custom-checkbox"></span> Usar Pedra 9,7 ou 7,9</label>
+                <label for="stoneCheck"><span class="custom-checkbox"></span> Possui pedra 9,7 ou 7,9?</label>
             </div>
             <div class="option">
                 <input class="filter-checkbox" type="checkbox" id="ancientCheck" name="ancientCheck" value="True">
-                <label for="ancientCheck"><span class="custom-checkbox"></span> Personagem usa itens Ancient?</label>
+                <label for="ancientCheck"><span class="custom-checkbox"></span> O personagem pode usar itens ancient?</label>
             </div>
             <div class="option">
                 <input class="filter-checkbox" type="checkbox" id="engraving12x12Check" name="engraving12x12Check" value="True">
-                <label for="engraving12x12Check"><span class="custom-checkbox"></span> Priorizar os dois engravings slots no 12</label>
+                <label for="engraving12x12Check"><span class="custom-checkbox"></span> Dois slots de engraving com 12 pontos de habilidade.</label>
             </div>
-        </div>
+            <div class="option">
+                <input class="filter-checkbox" type="checkbox" id="engravingclassCheck" name="engravingclassCheck" value="True">
+                <label for="engravingclassCheck"><span class="custom-checkbox"></span> Priorizar habilidade de classe no slot de engrave.</label>
+            </div>
+    </div>
         <button class="filter-button">Gerar build</button>
         
     </div>
@@ -196,6 +207,27 @@
           }
         };
 
+        // Para salvar o estado do formulário
+        document.getElementById("abilitiesForm").addEventListener("submit", function(){
+            var form = document.getElementById("abilitiesForm");
+            for (var i = 0; i < form.elements.length; i++) {
+                if (form.elements[i].type == "checkbox") {
+                    localStorage.setItem(form.elements[i].id, form.elements[i].checked);
+                }
+            }
+        });
+
+        // Para carregar o estado do formulário
+        window.onload = function() {
+            var form = document.getElementById("abilitiesForm");
+            for (var i = 0; i < form.elements.length; i++) {
+                if (form.elements[i].type == "checkbox") {
+                    form.elements[i].checked = localStorage.getItem(form.elements[i].id) == "true" ? true : false;
+                }
+            }
+        }
+
+        
 
     </script>
 

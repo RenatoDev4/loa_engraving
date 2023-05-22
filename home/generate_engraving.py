@@ -1,55 +1,16 @@
 import random
 
-ACCESSORY_RARITY = {
-    'Legendary': [(3, 3)],
-    'Relic': [(5, 3)],
-    'Ancient': [(6, 3)],
-}
-
-ABILITY_STONE_RARITY = {
-    'Legendary': (6,),
-    'Relic': (6, 10),
-}
-
-CHARACTER_CLASS = ['Death Blade',
-                   'Shadow Hunter',
-                   'Reaper',
-                   'Slayer',
-                   'Destroyer',
-                   'Berserker',
-                   'Gunlancer',
-                   'Paladin',
-                   'Artillerist',
-                   'Scouter',
-                   'Dead Eye',
-                   'Gunslinger',
-                   'Sharpshooter',
-                   'Bard',
-                   'Sorceress',
-                   'Arcana',
-                   'Artist',
-                   'Aeromancer',
-                   'Summoner',
-                   'Scrapper',
-                   'Soulfist',
-                   'Striker',
-                   'Glaivier',
-                   'Wardancer',
-                   ]
-
-ENGRAVING_SLOT_POINTS = [9, 12]
-
 ABILITY_LIST = [
     'Grudge',
     'Keen Blunt Weapon',
-    'Adrenaline',
-    'Raid Captain',
-    'Hit Master',
     'Cursed Doll',
+    'Hit Master',
+    'Raid Captain',
     'Ambush Master',
     'Mass Increase',
     'All-out Attack',
     'Super Charge',
+    'Adrenaline',
     'Barricade',
     'Master Brawler',
     'Awakening',
@@ -136,6 +97,45 @@ CLASS_ABILITY_LIST = [
 
 ]
 
+CHARACTER_CLASS = ['Aeromancer',
+                   'Arcana',
+                   'Artillerist',
+                   'Artist',
+                   'Bard',
+                   'Berserker',
+                   'Dead Eye',
+                   'Death Blade',
+                   'Destroyer',
+                   'Glaivier',
+                   'Gunlancer',
+                   'Gunslinger',
+                   'Paladin',
+                   'Reaper',
+                   'Scouter',
+                   'Scrapper',
+                   'Shadow Hunter',
+                   'Sharpshooter',
+                   'Slayer',
+                   'Sorceress',
+                   'Soulfist',
+                   'Striker',
+                   'Summoner',
+                   'Wardancer',
+                   ]
+
+ACCESSORY_RARITY = {
+    'Legendary': [(3, 3)],
+    'Relic': [(5, 3)],
+    'Ancient': [(6, 3)],
+}
+
+ABILITY_STONE_RARITY = {
+    'Legendary': (6,),
+    'Relic': (6, 10),
+}
+
+ENGRAVING_SLOT_POINTS = [9, 12]
+
 
 def generate_accessories(num_abilities, ancientCheck):
     accessories = []
@@ -146,11 +146,11 @@ def generate_accessories(num_abilities, ancientCheck):
 
     if num_abilities == 4:
         rarity_choices = ["Legendary", "Relic", "Ancient"] if ancientCheck else [
-            "Relic", 'Legendary']
+            'Legendary']
 
     if num_abilities == 5:
         rarity_choices = ["Relic", "Ancient"] if ancientCheck else [
-            "Relic", 'Legendary']
+            "Relic"]
 
     if num_abilities == 6:
         rarity_choices = ["Ancient"]
@@ -200,10 +200,7 @@ def generate_engraving_slots(num_abilities, engraving12x12Check, engravingclassC
     if engraving12x12Check:
         return [12, 12]
     else:
-        if engravingclassCheck:
-            return [random.choice(ENGRAVING_SLOT_POINTS)]
-        else:
-            return [random.choice(ENGRAVING_SLOT_POINTS), random.choice(ENGRAVING_SLOT_POINTS)]
+        return [random.choice(ENGRAVING_SLOT_POINTS), random.choice(ENGRAVING_SLOT_POINTS)]
 
 
 def distribute_points(abilities, class_abilities, points_required, stoneCheck, ancientCheck, engraving12x12Check, engravingclassCheck):
@@ -216,6 +213,11 @@ def distribute_points(abilities, class_abilities, points_required, stoneCheck, a
 
     # Select two abilities for the engraving slots
     engraving_slots_abilities = random.sample(range(num_abilities), 2)
+
+    # Adicione o código abaixo
+    if engravingclassCheck and class_abilities:
+        engraving_slots_abilities[0] = len(
+            abilities) + class_abilities.index(class_abilities[0])
 
     return (accessories, "Relic", ability_stone, engraving_slots, engraving_slots_abilities)
 
@@ -235,7 +237,7 @@ def generate_result(abilities, class_abilities, character_class, stoneCheck, anc
             abilities, class_abilities, points_required, stoneCheck, ancientCheck, engraving12x12Check, engravingclassCheck)
 
         points_distribution = {
-            ability: 0 for ability in abilities + class_abilities}
+            ability: 0 for ability in class_abilities + abilities}
 
         accessory_ability_allocation = []
 
@@ -263,8 +265,8 @@ def generate_result(abilities, class_abilities, character_class, stoneCheck, anc
         # Check if all abilities have at least 15 points
         if num_abilities == 6:
             # Special condition for six abilities
-            if (all(points >= points_required for ability, points in points_distribution.items() if ability != (abilities + class_abilities)[-1])
-                    and 5 <= points_distribution[(abilities + class_abilities)[-1]] <= 10):
+            if (all(points >= points_required for ability, points in points_distribution.items() if ability != abilities[-1])
+                    and 5 <= points_distribution[abilities[-1]] <= 10):
                 break
         else:
             if all(points >= points_required for points in points_distribution.values()):

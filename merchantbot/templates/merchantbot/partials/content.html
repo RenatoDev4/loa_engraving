@@ -1,0 +1,136 @@
+<body>
+    <div class="nav-wrapper">
+        <nav class="menu-container">
+          <ul class="menu">
+            <div class="left-container">
+              <div class="left-elements">
+                <span class="gerador-build-text">Quer gerar uma build automaticamente? Basta nos informar os engraves!<br></span>
+                <div class="button button-geradorbuild" id="button-5">
+                  <div id="translate"></div> 
+                  <a href="/generate/">Gerador de Build</a>
+                </div>
+              </div>
+
+      
+              <div class="right-elements">
+                <span class="gerador-build-text">Tem alguma duvída ou sugestão? Mande uma mensagem!<br></span>
+                <div class="button button-duvidas" id="button-5">
+                  <div id="translate"></div> 
+                  <a href="/duvidas/">Duvídas e Sugestões?</a> 
+                </div>
+              </div>
+            </div>
+          </ul>
+        </nav>
+      </div>
+ 
+      <section class="about box-formulario">
+        <div class="formulario formulario-left left">
+            <h1 class="title-form">
+                <span class="subtitle-form">Lost Merchant Bot</span>
+            </h1>
+            <p class="about-text-sobre-ferramenta">Nossa ferramenta envia mensagens pelo Telegram para ajudar os jogadores de Lost Ark a encontrar os Lost Merchants. Com ele, você receberá atualizações sobre a localização dos Lost Merchants automaticamente, enviamos localização de Rapport's Lendários e cartas importantes, como a carta lendaria "Wei". A ferramenta é totalmente gratuita e você só precisa ter uma conta no Telegram!</p>
+        </div>
+        <div class="formulario formulario-right right">
+            <h1 class="title-form">
+                <span class="subtitle-form">Escolha o servidor:</span>
+            </h1>   
+            <select id="main-menu">
+                <option value="">Selecione uma opção</option>
+                <option value="na-east">NA East</option>
+                <option value="na-west">NA West</option>
+                <option value="eu-central">EU Central</option>
+                <option value="eu-west">EU West</option>
+                <option value="south-america">South America</option>
+            </select>
+
+            <select class="sub-menu" id="na-east">
+                <option>Adrinne</option>
+                <option>Aldebaran</option>
+                <option>Avesta</option>
+                <option>Azena</option>
+                <option>Danube</option>
+                <option>Elzowin</option>
+                <option>Galatur</option>
+                <option>Karta</option>
+                <option>Kharmine</option>
+                <option>Ladon</option>
+                <option>Regulus</option>
+                <option>Sasha</option>
+                <option>Una</option>
+                <option>Vykas</option>
+                <option>Zosma</option>
+            </select>
+
+            <select class="sub-menu" id="na-west">
+                <option>Akkan</option>
+                <option>Bergstrom</option>
+                <option>Enviska</option>
+                <option>Mari</option>
+                <option>Rohendel</option>
+                <option>Shandi</option>
+                <option>Valtan</option>
+            </select>
+
+            <select class="sub-menu" id="eu-central">
+              <option>Antares</option>
+              <option>Armen</option>
+              <option>Asta</option>
+              <option>Calvasus</option>
+              <option>Evergrace</option>
+              <option>Ezrebet</option>
+              <option>Kadan</option>
+              <option>Lazenith</option>
+              <option>Mokoko</option>
+              <option>Neria</option>
+              <option>Slen</option>
+              <option>Thirain</option>
+              <option>Trixion</option>
+              <option>Wei</option>
+              <option>Zinnervale</option>
+          </select>
+
+          <select class="sub-menu" id="eu-west">
+            <option>Ealyn</option>
+            <option>Nia</option>
+        </select>
+
+        <select class="sub-menu" id="sa">
+          <option>Arthetine</option>
+          <option>Blackfang</option>
+          <option>Kazeros</option>
+      </select>
+
+            <p id="link-message"></p>
+
+            <!-- Continue com os outros menus aqui -->  
+        </div>
+    </section>
+
+    <script>
+      $(document).ready(function(){
+          $(".sub-menu").hide();
+          $("#main-menu").change(function(){
+              $(".sub-menu").hide();
+              $("#" + $(this).val()).show();
+              $("#link-message").html(""); // Limpa a mensagem quando o menu principal é alterado.
+          });
+
+          $(".sub-menu").change(function(){
+              var selectedOption = $(this).val();
+              switch (selectedOption) {
+                  case 'Adrinne':
+                      $("#link-message").html("Aqui está o link para o grupo do Telegram: <br><a href='https://telegram.org/'>Telegram - Adrinne</a>");
+                      break;
+                  case 'Aldebaran':
+                      $("#link-message").html("Aqui está o link para o grupo do Telegram: <br><a href='https://telegram.org/'>Telegram - Aldebaran</a>");
+                      break;
+                  // Continue com os outros casos aqui
+              }
+          });
+      });
+  </script>
+
+    
+  </body>
+</html>

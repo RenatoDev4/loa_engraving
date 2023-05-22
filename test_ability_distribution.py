@@ -1,6 +1,6 @@
 import unittest
 
-from generate_engraving import \
+from home.generate_engraving import \
     generate_result  # Importe a função generate_result do seu módulo
 
 

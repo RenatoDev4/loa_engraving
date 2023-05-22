@@ -1,8 +1,8 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 
-from generate_engraving import (ABILITY_LIST, CHARACTER_CLASS,
-                                CLASS_ABILITY_LIST, generate_result)
+from home.generate_engraving import (ABILITY_LIST, CHARACTER_CLASS,
+                                     CLASS_ABILITY_LIST, generate_result)
 
 
 def result(request):
