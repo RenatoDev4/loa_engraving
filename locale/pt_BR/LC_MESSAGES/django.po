@@ -1,0 +1,333 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-23 15:38-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: duvidas/templates/duvidas/pages/confirmacao.html:9
+#: duvidas/templates/duvidas/partials/content.html:9
+#: merchantbot/templates/merchantbot/partials/content.html:8
+msgid "Want to generate a build automatically? Just let us know the engraves!"
+msgstr "Quer gerar uma build automaticamente? Basta nos informar as gravações!"
+
+#: duvidas/templates/duvidas/pages/confirmacao.html:12
+#: duvidas/templates/duvidas/partials/content.html:12
+#: merchantbot/templates/merchantbot/partials/content.html:11
+msgid "Build Generator"
+msgstr "Gerador de Build"
+
+#: duvidas/templates/duvidas/pages/confirmacao.html:18
+#: duvidas/templates/duvidas/partials/content.html:18
+msgid "Want to be notified when have Rapport Legendary or Wei via Telegram?"
+msgstr ""
+"Quer ser notificado quando houver Rapport Legendary ou Wei via Telegram?"
+
+#: duvidas/templates/duvidas/pages/confirmacao.html:32
+msgid "Thank you for your contact! We will respond to your message shortly!"
+msgstr "Obrigado por seu contato! Em breve responderemos sua mensagem!"
+
+#: duvidas/templates/duvidas/pages/confirmacao.html:35
+msgid "Home Page"
+msgstr "Pagina Inicial"
+
+#: duvidas/templates/duvidas/partials/content.html:34
+msgid "Questions or Suggestions? Contact us!"
+msgstr "Dúvidas ou Sugestões? Contate-nos!"
+
+#: duvidas/templates/duvidas/partials/content.html:39
+msgid "Name"
+msgstr "Nome"
+
+#: duvidas/templates/duvidas/partials/content.html:43
+msgid "E-mail"
+msgstr "E-mail"
+
+#: duvidas/templates/duvidas/partials/content.html:47
+msgid "Subject"
+msgstr "Assunto"
+
+#: duvidas/templates/duvidas/partials/content.html:51
+msgid ""
+"If you have any questions or want to report a bug, please write us a "
+"message. We will be ready to respond as soon as possible."
+msgstr ""
+"Se você tiver alguma dúvida ou quiser relatar um bug, escreva-nos uma "
+"mensagem. Estaremos prontos para responder o mais breve possível."
+
+#: duvidas/templates/duvidas/partials/content.html:56
+msgid "Send"
+msgstr "Enviar"
+
+#: home/templates/form.html:17
+msgid ""
+"Want to be notified when you have Rapport Legendary or Wei via Telegram?"
+msgstr ""
+"Quer ser notificado quando tiver Rapport Legendary ou Wei via Telegram?"
+
+#: home/templates/form.html:25
+#: merchantbot/templates/merchantbot/partials/content.html:17
+msgid "Get in touch if you have any question."
+msgstr "Entre em contato em caso de duvidas."
+
+#: home/templates/form.html:28
+msgid "contact"
+msgstr "contato"
+
+#: home/templates/form.html:47
+msgid "Find out how to use our tool!"
+msgstr "Descubra como usar nossa ferramenta!"
+
+#: home/templates/form.html:49
+msgid "Welcome to our app for creating engraver builds for Lost Ark!"
+msgstr ""
+"Bem-vindo ao nosso aplicativo para criar builds de engrave automaticamente "
+"para Lost Ark!"
+
+#: home/templates/form.html:50
+msgid ""
+"With our tool, you can automatically generate an ideal engraves build for "
+"your character, intelligently distributing the points in accessories, stone "
+"skills and engraves slots. Allow me to explain how it works:"
+msgstr ""
+"Com nossa ferramenta, você pode gerar automaticamente uma build de engrave "
+"ideal para seu personagem, distribuindo de forma inteligente os pontos entre "
+"acessórios, habilidades de pedra e slots de engraves. Deixe-me explicar como "
+"funciona:"
+
+#: home/templates/form.html:51
+msgid "Step 1: Choose your class"
+msgstr "Passo 1: Escolha sua classe"
+
+#: home/templates/form.html:52
+msgid "To get started, select your game class."
+msgstr "Para começar, selecione sua classe do jogo."
+
+#: home/templates/form.html:53
+msgid "Step 2: Choose combat and class engraves"
+msgstr "Passo 2: Escolher os engraves de combate e classe"
+
+#: home/templates/form.html:54
+msgid ""
+"After selecting your class, you will be able to choose from 4 to 5 combat "
+"engravings and up to 2 class."
+msgstr ""
+"Depois de selecionar sua classe, você poderá escolher de 4 a 5 engraves de "
+"combates e até 2 de classe."
+
+#: home/templates/form.html:56
+msgid ""
+"*If 6 skills are selected, the last one selected will be the sixth engraver."
+msgstr ""
+"*Se 6 habilidades forem selecionadas, a última selecionada será o sexto "
+"engrave."
+
+#: home/templates/form.html:58
+msgid "Step 3: Use the filters for a more accurate calculation (optional)"
+msgstr "Passo 3: Use os filtros para um cálculo mais preciso (opcional)"
+
+#: home/templates/form.html:59
+msgid ""
+"For even greater precision in the distribution of engrave points, we offer "
+"filters on the right of the screen. With it, you can define specific "
+"criteria, such as prioritizing a certain attribute or balancing the engrave "
+"points between different areas of your character. This option is completely "
+"optional, but it can be useful to further enhance your build."
+msgstr ""
+"Para uma precisão ainda maior na distribuição dos pontos de engrave, "
+"oferecemos filtros à direita da tela. Com ele, você pode definir critérios "
+"específicos, como priorizar um determinado atributo ou equilibrar os pontos "
+"de engrave entre diferentes áreas do seu personagem. Esta opção é totalmente "
+"opcional, mas pode ser útil para aprimorar ainda mais sua construção."
+
+#: home/templates/form.html:60
+msgid "Step 4: Generate your engraves build"
+msgstr "Passo 4: Gere sua build de engraves"
+
+#: home/templates/form.html:61
+msgid ""
+"Once you've made your class choices, combat engraves, and class engraves, "
+"it's time to generate your engraves build. Our system will automatically "
+"distribute engrave points on accessories, ability stones and engrave slots, "
+"no more suffering to create builds, right?"
+msgstr ""
+"Depois de fazer suas escolhas de classe, engraves de combate e de classe, é "
+"hora de gerar sua build. Nosso sistema vai distribuir pontos de gravação "
+"automaticamente entre os acessórios, pedras de habilidade e slots de "
+"engraving, sem mais sofrimento para criar builds, certo?"
+
+#: home/templates/form.html:62
+msgid "Step 5: Edit your build (optional)"
+msgstr "Etapa 5: edite sua build (opcional)"
+
+#: home/templates/form.html:63
+msgid ""
+"After the build is generated, you will have the option to make edits if you "
+"are not completely satisfied with the result. You can manually adjust the "
+"engrave points on each accessory, ability stone or slot to customize the "
+"build to your preferences."
+msgstr ""
+"Depois que a build for gerada, você terá a opção de fazer edições se não "
+"estiver totalmente satisfeito com o resultado. Você pode ajustar manualmente "
+"os pontos em cada acessório, pedra de habilidade ou slot de engraving para "
+"personalizar a construção de acordo com suas preferências."
+
+#: home/templates/form.html:65
+msgid ""
+"Our goal is to make the process of creating engraver builds for the Lost Ark "
+"easier and faster, allowing you to get the most out of your character!"
+msgstr ""
+"Nosso objetivo é tornar o processo de criação de builds de Lost Ark mais "
+"fácil e rápido, permitindo que você aproveite ao máximo seu personagem!"
+
+#: home/templates/form.html:68
+msgid ""
+"**Our tool is in beta testing phase. If you find any bugs, please report "
+"them to us so we can fix them."
+msgstr ""
+"**Nossa ferramenta está em fase beta de testes. Se você encontrar algum bug, "
+"informe-nos para que possamos corrigi-los."
+
+#: home/templates/form.html:81
+msgid "Choose your class:"
+msgstr "Escolha sua classe:"
+
+#: home/templates/form.html:96
+msgid "Choose combat engraves:"
+msgstr "Escolha os engraves de combat:"
+
+#: home/templates/form.html:110
+msgid "Choose class engraves:"
+msgstr "Escolha os engraves de classe:"
+
+#: home/templates/form.html:126
+msgid "Filters:"
+msgstr "Filtros:"
+
+#: home/templates/form.html:130
+msgid "Do you have a 9-7 or 7-9 stone?"
+msgstr "Você possui uma pedra 9-7 ou 7-9?"
+
+#: home/templates/form.html:134
+msgid "Can the character use ancient itens?"
+msgstr "O seu personagem pode usar itens ancient?"
+
+#: home/templates/form.html:138
+msgid "Use two engraving slots with 12 skill points."
+msgstr "Use os dois engravings slots com 12 pontos de habilidade"
+
+#: home/templates/form.html:142
+msgid "Prioritize class skill in engrave slot."
+msgstr "Priorize a habilidade de classe no slot de engraving."
+
+#: home/templates/form.html:145
+msgid "Generate build"
+msgstr "Gerar build"
+
+#: home/templates/form.html:152
+msgid "Did you find value in this project? Consider"
+msgstr "Você encontrou valor neste projeto? Considere fazer uma"
+
+#: home/templates/form.html:154
+msgid "donate"
+msgstr "doação"
+
+#: home/templates/form.html:156
+msgid ""
+"to help maintain and constantly update this tool, keeping it available to "
+"you at all times!"
+msgstr "para ajudar a manter e atualizar constantemente esta ferramenta"
+
+#: home/templates/form.html:160
+msgid "Developed by"
+msgstr "Desenvolvido por"
+
+#: home/templates/index.html:10
+msgid "Build generated"
+msgstr "Build gerada"
+
+#: home/templates/index.html:28
+msgid "You can edit your build as needed:"
+msgstr "Você pode editar sua build conforme necessário:"
+
+#: home/templates/index.html:31
+msgid "Edit"
+msgstr "Editar"
+
+#: home/templates/index.html:36
+msgid "Didn't like the build? We re-calculate it for you!"
+msgstr "Não gostou da build? Nós recalculamos para você!"
+
+#: home/templates/index.html:45
+msgid "Back to skill selection menu:"
+msgstr "Voltar para o menu de seleção de habilidades:"
+
+#: home/templates/index.html:48
+msgid "Go back"
+msgstr "Voltar"
+
+#: home/templates/index.html:55
+msgid "Distribution Points"
+msgstr "Distribuição de Pontos"
+
+#: home/templates/index.html:73
+msgid "Accessories"
+msgstr "Acessórios"
+
+#: home/templates/index.html:215
+msgid "Ability Stone"
+msgstr "Pedra de Habilidade"
+
+#: home/templates/index.html:243
+msgid "Engraving Slots"
+msgstr "Slots de Engraving"
+
+#: merchantbot/templates/merchantbot/partials/content.html:33
+msgid ""
+"Our tool sends messages via Telegram to help Lost Ark players find Lost "
+"Merchants. With it, you will receive updates on the location of Lost "
+"Merchants automatically, we send you the location of Legendary Rapport's and "
+"important cards, such as the legendary card Wei. The tool is completely free "
+"and you only need to have a Telegram account!"
+msgstr ""
+"Nossa ferramenta envia mensagens via Telegram para ajudar jogadores de Lost "
+"Ark a encontrar Lost Merchants. Com ele, você receberá atualizações sobre a "
+"localização deles automaticamente, nós lhe enviaremos a localização de "
+"Rapport's Lendários e cartas importantes, como a carta lendária Wei. A "
+"ferramenta é totalmente gratuita e você só precisa ter uma conta no Telegram!"
+
+#: merchantbot/templates/merchantbot/partials/content.html:37
+msgid "Server choose"
+msgstr "Escolha seu servidor"
+
+#: merchantbot/templates/merchantbot/partials/content.html:40
+msgid "Select an option"
+msgstr "Selecione uma opção"
+
+#, fuzzy
+#~| msgid "Contact"
+#~ msgid "Contact"
+#~ msgstr "Contato"
+
+#, fuzzy
+#~| msgid "Questions or Suggestions? Contact us!"
+#~ msgid "Any question or suggestion? Send a message"
+#~ msgstr "Dúvidas ou Sugestões? Contate-nos!"
+
+#, fuzzy
+#~| msgid "Questions or Suggestions? Contact us!"
+#~ msgid "Do you have any questions or suggestions?"
+#~ msgstr "Dúvidas ou Sugestões? Contate-nos!"

@@ -98,7 +98,7 @@ CLASS_ABILITY_LIST = [
 ]
 
 CHARACTER_CLASS = ['Aeromancer',
-                   'Arcana',
+                   'Arcanist',
                    'Artillerist',
                    'Artist',
                    'Bard',

@@ -1,12 +1,13 @@
 {% load custom_filters %}
 {% load static %}
+{% load i18n%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% for character in character_class %}
-    <title>Build gerada - {{ character }}</title>
+    <title>{% translate "Build generated" %} - {{ character }}</title>
     {% endfor %}
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
@@ -24,15 +25,15 @@
     <ul class="menu">
       <div class="left-container">
         <div class="left-elements">
-          <span class="edit-text">Você pode editar sua build conforme necessidade:<br></span>
+          <span class="edit-text">{% translate "You can edit your build as needed:" %}<br></span>
           <div class="button" id="button-5">
             <div id="translate"></div>      
-            <a id="editButton" onclick="toggleEdit()">Editar</a>
+            <a id="editButton" onclick="toggleEdit()">{% translate "Edit" %}</a>
           </div>
         </div>
         
         <div class="right-elements">
-          <span class="rebuild-text">Não gostou da build? Nós re-calculamos ela para você:<br></span>
+          <span class="rebuild-text">{% translate "Didn't like the build? We re-calculate it for you!" %}<br></span>
           <div class="button button-rebuild" id="button-5">
             <div id="translate"></div> 
             <a href="#" onclick="location.reload();">Rebuild</a>
@@ -41,17 +42,17 @@
       </div>
       
       <div class="position-right">
-        <span class="rebuild-text">Voltar para o menu de seleção de skills:<br></span>
+        <span class="rebuild-text">{% translate "Back to skill selection menu:" %}<br></span>
         <div class="button button-homepage" id="button-5">
           <div id="translate"></div> 
-          <a href="/generate/">Voltar</a>
+          <a href="">{% translate "Go back" %}</a>
         </div>
       </div>
     </ul>
   </nav>
 
   <div class="points-distribution">
-    <h3 class="points-text">Distribuição de pontos</h3>
+    <h3 class="points-text">{% translate "Distribution Points" %}</h3>
     <ul id="pointsDistribution">
       {% for ability, points in points_distribution.items %}
       <li>
@@ -68,7 +69,7 @@
 
   {% comment %} Necklace {% endcomment %}
   <div class="content-wrapper">
-    <h3 class="centered-text">Acessórios</h3>
+    <h3 class="centered-text">{% translate "Accessories" %}</h3>
     <ul class="accessories-list">
       <li>
         <div>
@@ -205,7 +206,7 @@
   </ul>
   
   {% comment %} Abilit Stone {% endcomment %}
-  <h3 class="centered-text">Habidades da pedra</h3>
+  <h3 class="centered-text">{% translate "Ability Stone" %}</h3>
   <ul class="accessories-list">
     <li>
       <div>
@@ -232,7 +233,7 @@
   </ul>
   
   {% comment %} Engraving Slot {% endcomment %}
-  <h3 class="centered-text">Slots de Engraving</h3>
+  <h3 class="centered-text">{% translate "Engraving Slots" %}</h3>
   <ul class="accessories-list">
     <li>
       <div>

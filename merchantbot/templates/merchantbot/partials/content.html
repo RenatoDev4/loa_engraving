@@ -1,22 +1,23 @@
+{% load i18n %}
 <body>
     <div class="nav-wrapper">
         <nav class="menu-container">
           <ul class="menu">
             <div class="left-container">
               <div class="left-elements">
-                <span class="gerador-build-text">Quer gerar uma build automaticamente? Basta nos informar os engraves!<br></span>
+                <span class="gerador-build-text">{% translate "Want to generate a build automatically? Just let us know the engraves!" %}<br></span>
                 <div class="button button-geradorbuild" id="button-5">
                   <div id="translate"></div> 
-                  <a href="/generate/">Gerador de Build</a>
+                  <a href="/">{% translate "Build Generator" %}</a>
                 </div>
               </div>
 
       
               <div class="right-elements">
-                <span class="gerador-build-text">Tem alguma duvída ou sugestão? Mande uma mensagem!<br></span>
+                <span class="gerador-build-text">{% translate 'Get in touch if you have any question.'%}<br></span>
                 <div class="button button-duvidas" id="button-5">
                   <div id="translate"></div> 
-                  <a href="/duvidas/">Duvídas e Sugestões?</a> 
+                  <a href="/duvidas/">{% translate 'contact'%}</a> 
                 </div>
               </div>
             </div>
@@ -29,14 +30,14 @@
             <h1 class="title-form">
                 <span class="subtitle-form">Lost Merchant Bot</span>
             </h1>
-            <p class="about-text-sobre-ferramenta">Nossa ferramenta envia mensagens pelo Telegram para ajudar os jogadores de Lost Ark a encontrar os Lost Merchants. Com ele, você receberá atualizações sobre a localização dos Lost Merchants automaticamente, enviamos localização de Rapport's Lendários e cartas importantes, como a carta lendaria "Wei". A ferramenta é totalmente gratuita e você só precisa ter uma conta no Telegram!</p>
+            <p class="about-text-sobre-ferramenta">{% translate "Our tool sends messages via Telegram to help Lost Ark players find Lost Merchants. With it, you will receive updates on the location of Lost Merchants automatically, we send you the location of Legendary Rapport's and important cards, such as the legendary card Wei. The tool is completely free and you only need to have a Telegram account!" %}</p>
         </div>
         <div class="formulario formulario-right right">
             <h1 class="title-form">
-                <span class="subtitle-form">Escolha o servidor:</span>
+                <span class="subtitle-form">{% translate "Server choose" %}</span>
             </h1>   
             <select id="main-menu">
-                <option value="">Selecione uma opção</option>
+                <option value="">{% translate "Select an option" %}</option>
                 <option value="na-east">NA East</option>
                 <option value="na-west">NA West</option>
                 <option value="eu-central">EU Central</option>
@@ -95,7 +96,7 @@
             <option>Nia</option>
         </select>
 
-        <select class="sub-menu" id="sa">
+        <select class="sub-menu" id="south-america">
           <option>Arthetine</option>
           <option>Blackfang</option>
           <option>Kazeros</option>
@@ -106,30 +107,6 @@
             <!-- Continue com os outros menus aqui -->  
         </div>
     </section>
-
-    <script>
-      $(document).ready(function(){
-          $(".sub-menu").hide();
-          $("#main-menu").change(function(){
-              $(".sub-menu").hide();
-              $("#" + $(this).val()).show();
-              $("#link-message").html(""); // Limpa a mensagem quando o menu principal é alterado.
-          });
-
-          $(".sub-menu").change(function(){
-              var selectedOption = $(this).val();
-              switch (selectedOption) {
-                  case 'Adrinne':
-                      $("#link-message").html("Aqui está o link para o grupo do Telegram: <br><a href='https://telegram.org/'>Telegram - Adrinne</a>");
-                      break;
-                  case 'Aldebaran':
-                      $("#link-message").html("Aqui está o link para o grupo do Telegram: <br><a href='https://telegram.org/'>Telegram - Aldebaran</a>");
-                      break;
-                  // Continue com os outros casos aqui
-              }
-          });
-      });
-  </script>
 
     
   </body>

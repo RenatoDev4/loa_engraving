@@ -1,0 +1,8 @@
+asgiref==3.6.0
+autopep8==2.0.2
+Django==4.2.1
+mypy==1.2.0
+mypy-extensions==1.0.0
+pycodestyle==2.10.0
+sqlparse==0.4.4
+typing_extensions==4.5.0
