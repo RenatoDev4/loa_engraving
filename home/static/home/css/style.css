@@ -668,6 +668,10 @@ footer a:hover {
     margin-left: 75px;
   }
 
+  #rodape {
+    height: 5px;
+  }
+
   #rodape p {
     font-size: 10px;
   }
