@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: linear-gradient(135deg, #121212 0%, #1C1C1C 100%);
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#class-bg {
+  position: absolute;
+  top: 420px;
+  left: 600px;
+  width: 55%;
+  height: 55%;
+  z-index: -1;
+  opacity: 0.5; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+li h1 {
+  margin-top: 20px;
+}
+
+strong {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+.abilityContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.pointsContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.imgContainer {
+  width: 60px;
+}
+
+.pointsImgContainer {
+  width: 60px;
+}
+
+.textContainer {
+  width: 150px;
+  text-align: left;
+}
+
+.abilityContainer img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15%;
+}
+
+.pointsContainer img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15%;
+}
+
+.classContainer {
+  text-align: center;  
+}
+
+.classContainer img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15%;
+}
+
+.abilityContainer:nth-child(2n) {
+  margin-left: 5px;
+}
+
+.editablePoint,
+.editableAbility {
+  display: none;
+}
+
+.small-input {
+  width: 15px;
+}
+
+.acessories_img {
+  margin-right: 15px;
+}
+
+#pointsDistribution {
+  margin-top: 20px;
+}
+
+#pointsDistribution li {
+  margin-bottom: 10px;
+}
+
+/* Efeitos adicionais */
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"],
+select {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.editableAbility {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.editableAbility:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Efeito de hover nas imagens */
+.abilityContainer img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Efeito de hover nas do point distributions */
+.pointsContainer img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.editableAbility:focus {
+  background-color: rgba(0,0,0,0.3); /* Altere para a cor que você deseja */
+}
+
+/* Efeito de sombra nas habilidades */
+.editablePoint {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.abilityItem {
+  text-align: center;
+  margin: 10px;
+}
+
+.abilityInfo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.abilityName {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.content-wrapper {
+  overflow: hidden;
+}
+
+.accessories {
+  float: left;
+  width: 60%;
+}
+
+.points-distribution {
+  float: right;
+  width: 45%;
+}
+
+.accessories-list .editing {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilos adicionais para separação dos elementos */
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.left-container {
+  display: flex;
+}
+
+.position-right {
+  top: 0;
+  right: 0;
+  margin-right: 20px;
+  border-left: 1px solid #fff;
+  padding-left: 40px;
+}
+
+.left-elements {
+  margin-right: 20px;
+  margin-left: 60px;
+}
+
+.right-elements {
+  margin-left: 20px;
+  border-left: 1px solid #fff;
+  padding-left: 40px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.edit-text,
+.rebuild-text {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.points-distribution {
+  border-left: 1px solid #fff;
+  padding-left: 30px;
+  margin-left: 10px;
+}
+
+.pointsContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.pointsContainer:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.abilityGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid white; /* Adiciona uma linha de 1px preta na parte inferior */
+  padding-bottom: 10px; /* Adiciona um espaço entre o conteúdo e a linha */
+  margin-bottom: 30px; /* Adiciona um espaço após a linha */
+  width: 330px; /* Define um comprimento fixo para a linha de separação */
+}
+
+.accessories_img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 38px; /* Ajuste este valor conforme necessário */
+  margin-right: 15px;
+  margin-left: 50px;
+  
+}
+
+.centered-text {
+  margin-left: 290px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #00B4FF;
+  font-family: 'Oswald', sans-serif;
+}
+
+.points-text {
+
+  text-transform: uppercase;
+  color: #00B4FF;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+/* Button Styles */
+
+.button {
+  display: flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #00B4FF;
+  color: #BFC0C0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.button a {
+  color: #BFC0C0;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+
+/* Fifth Button */
+
+#button-5 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-5 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  transition: all .45s ease-Out;
+}
+
+#translate {
+  transform: rotate(50deg);
+  width: 100%;
+  height: 250%;
+  left: -200px;
+  top: -30px;
+  background: #BFC0C0;
+  position: absolute;
+  transition: all .3s ease-Out;
+}
+
+#button-5:hover #translate {
+  left: 0;
+}
+
+#button-5:hover a {
+  color: #2D3142;
+}
+
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  #container {
+    width: 50%;
+  }
+}
+
+.button-rebuild #translate {
+  background: orangered;
+}
+
+
+.button-homepage {
+  border: 2px solid orangered;
+}
+
+/* Rodapé */
+
+#rodape {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #121212 100%, #1C1C1C 100%);
+  border-top: 1px solid white;
+  color: white;
+  padding: 8px;
+  justify-content: space-between;
+}
+
+footer a {
+  color: orangered;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+footer a:hover {
+  color: orangered;
+  border-bottom: 1px solid orangered;
+}
+
+.right-content {
+  margin-right: 30px;
+}
+
+#rodape p {
+  margin: 0;
+}
