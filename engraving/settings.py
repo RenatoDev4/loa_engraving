@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 
+import django_heroku
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +28,7 @@ SECRET_KEY = 'django-insecure-^st0t@0^lz&z@3aniqsmp5_1y1soi7_%5@50hz%ys8u$ei#h0&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://loa-engraving.herokuapp.com/']
 
 
 # Application definition
@@ -138,3 +140,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'renatodev4@gmail.com'
 EMAIL_HOST_PASSWORD = 'uugxxdpdsvimamtc'
+
+django_heroku.settings(locals())
