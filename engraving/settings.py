@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^st0t@0^lz&z@3aniqsmp5_1y1soi7_%5@50hz%ys8u$ei#h0&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://loa-engraving.herokuapp.com/']
 
