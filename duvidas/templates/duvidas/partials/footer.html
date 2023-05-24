@@ -1,8 +1,16 @@
-<footer>
-    <div class="left-content">
-      Achou o projeto útil? Me ajude com uma <a href="https://nubank.com.br/pagar/xgnnu/wAhoMYA3vm" target="_blank" onclick="window.open(this.href, 'popup', 'width=1041,height=865'); return false;">doação</a>, para que eu possa manter essa ferramenta online e sempre atualizada! 
-    </div>
-    <div class="right-content">
-      Desenvolvido por <a href="mailto:renatodev4@gmail.com?subject=Contato Profissional">Renato Moraes</a>
-    </div>
+{% load i18n %}
+<footer id="rodape">
+  <div class="footer left-content">
+      <p>
+          {% translate "Did you find value in this project? Consider" %}
+          <a href="https://nubank.com.br/pagar/xgnnu/wAhoMYA3vm" target="_blank" onclick="window.open(this.href, 'popup', 'width=1041,height=865'); return false;">
+          {% translate "donate" %}
+          </a>
+          {% translate "to help maintain and constantly update this tool, keeping it available to you at all times!" %}
+      </p>
+  </div>
+  <div class="footer right-content">
+      {% translate "Developed by" %}
+      <a href="mailto:renatodev4@gmail.com?subject=Contato Profissional">Renato Moraes</a>
+  </div>
 </footer>
