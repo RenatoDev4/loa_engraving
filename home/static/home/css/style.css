@@ -575,3 +575,116 @@ footer a:hover {
 #rodape p {
   margin: 0;
 }
+
+/* CSS para dispotivios moveis */
+
+@media screen and (max-width: 800px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  #abilitiesForm {
+    padding: 10px;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .character_classContainer,
+  .abilityContainer {
+    width: 100px;
+    height: 100px;
+  }
+
+  input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  #abilitiesForm .class-selection {
+    flex-basis: 100%; /* Alterando a largura da seleção de classe para 100% */
+    margin-left: 0px; /* Removendo a margem esquerda negativa */
+  }
+
+  #abilitiesForm .filter-section {
+    flex-basis: 100%; /* Define a largura da seção de filtros */
+  }
+
+  .filter-section {
+    padding: 10px;
+  }
+
+  .filter-button {
+    font-size: 14px;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu-container {
+    margin-left: 0px;
+  }
+
+  .nav-wrapper {
+    margin-bottom: 10px;
+    padding: 0px 0;
+  }
+
+  .left-container {
+    flex-direction: column;
+  }
+
+  .position-right {
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    border-left: 0px;
+    padding-left: 0px;
+  }
+
+  .left-elements {
+    margin-right: 10px;
+    margin-left: 30px;
+  }
+
+  .right-elements {
+    margin-left: 10px;
+    border-left: 0px;
+    padding-left: 20px;
+  }
+
+  .primeiro-item {
+    margin-left: 85px;
+  }
+
+  .botao-container {
+    margin-left: 75px;
+  }
+
+  #rodape p {
+    font-size: 10px;
+  }
+
+  .right-content {
+    font-size: 10px;
+  }
+
+  .button-lostmerchant {
+    margin-bottom: 10px;
+  }
+
+  .botao-container {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 15px;
+  }
+}
