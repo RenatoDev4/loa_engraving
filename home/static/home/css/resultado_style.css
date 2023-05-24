@@ -383,15 +383,6 @@ select:focus {
 }
 
 
-@media screen and (min-width: 1000px) {
-  h1 {
-    font-size: 2.2em;
-  }
-  #container {
-    width: 50%;
-  }
-}
-
 .button-rebuild #translate {
   background: orangered;
 }
@@ -434,4 +425,101 @@ footer a:hover {
 
 #rodape p {
   margin: 0;
+}
+
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 13px;
+  }
+
+  .accessories_img {
+    width: 30px;
+    height: 30px;    
+  }
+
+
+  .points-distribution {
+    width: 100%;
+    height: 100%; /* ajuste de acordo com a sua necessidade */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Se desejar também centralizar verticalmente */
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .left-container {
+    flex-direction: column;
+  }
+
+  .position-right {
+    position: static;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .left-elements {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .right-elements {
+    margin-left: 0;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  #class-bg {
+    width: 100%;
+    height: auto;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  #rodape p {
+    font-size: 10px;
+  }
+
+  .right-content {
+    font-size: 10px;
+  }
+
+  .button-rebuild,
+  .button-homepage,
+  .button
+   {
+    height: 40px;
+    width: 150px;
+    float: center;
+  }
+
+  .button-rebuild {
+    left: -10px;
+  }
+
+  .accessories_img {
+    margin-left: 0;
+  }
+
+  .centered-text {
+    margin-left: 150px;
+  }
+
+  #class-bg {
+    display: none;
+  }
+
+  .editableAbility,
+  .editablePoint {
+    font-size: 10px; /* ajuste o tamanho da fonte conforme necessário */
+    padding: 5px; /* ajuste o padding conforme necessário */
+}
+  
 }
