@@ -443,6 +443,10 @@ footer a:hover {
     width: 100%;
     height: 100%; /* ajuste de acordo com a sua necessidade */
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Se desejar também centralizar verticalmente */
   }
 
   .menu {
@@ -517,5 +521,13 @@ footer a:hover {
     font-size: 10px; /* ajuste o tamanho da fonte conforme necessário */
     padding: 5px; /* ajuste o padding conforme necessário */
 }
-  
+
+  .accessories,
+  .points-distribution {
+    border-left: none;
+    float: none;
+    width: 100%;
+  }
+
+ 
 }
