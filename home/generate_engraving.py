@@ -97,6 +97,13 @@ CLASS_ABILITY_LIST = [
 
 ]
 
+# NAGATIVE_ABILITY = [
+#     'Atk. Power Reduction',
+#     'Atk. Speed Reduction',
+#     'Defense Reduction',
+#     'Move Speed Reduction'
+# ]
+
 CHARACTER_CLASS = ['Aeromancer',
                    'Arcanist',
                    'Artillerist',

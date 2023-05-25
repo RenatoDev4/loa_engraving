@@ -211,7 +211,7 @@ select:focus {
 
 .points-distribution {
   float: right;
-  width: 45%;
+  width: 35%;
 }
 
 .accessories-list .editing {
@@ -426,6 +426,8 @@ footer a:hover {
 #rodape p {
   margin: 0;
 }
+
+
 
 /* Estilos para dispositivos móveis */
 @media only screen and (max-width: 800px) {

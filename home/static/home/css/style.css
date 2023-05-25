@@ -97,6 +97,9 @@ body {
   width: 64px;
   height: 64px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .abilityContainer label {
@@ -576,9 +579,10 @@ footer a:hover {
   margin: 0;
 }
 
+
 /* CSS para dispotivios moveis */
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1000px) {
 
   body {
     font-size: 16px;
@@ -669,15 +673,15 @@ footer a:hover {
   }
 
   #rodape {
-    height: 5px;
+    height: 15px;
   }
 
   #rodape p {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .right-content {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .button-lostmerchant {
@@ -690,5 +694,13 @@ footer a:hover {
 
   .section-title {
     font-size: 15px;
+  }
+
+  .abilityContainer label {
+    font-size: 0.6rem;
+  }
+  
+  .characterContent {
+    font-size: 0.7rem;
   }
 }
