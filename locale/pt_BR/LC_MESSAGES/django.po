@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-23 15:38-0300\n"
+"POT-Creation-Date: 2023-05-25 10:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,32 +72,69 @@ msgstr ""
 msgid "Send"
 msgstr "Enviar"
 
-#: home/templates/form.html:17
+#: duvidas/templates/duvidas/partials/footer.html:5
+#: home/templates/form.html:157 home/templates/index.html:319
+#: merchantbot/templates/merchantbot/partials/footer.html:5
+msgid "Did you find value in this project? Consider"
+msgstr "Você encontrou valor neste projeto? Considere fazer uma"
+
+#: duvidas/templates/duvidas/partials/footer.html:7
+#: home/templates/form.html:159 home/templates/index.html:321
+#: merchantbot/templates/merchantbot/partials/footer.html:7
+msgid "donate"
+msgstr "doação"
+
+#: duvidas/templates/duvidas/partials/footer.html:9
+#: home/templates/form.html:161 home/templates/index.html:323
+#: merchantbot/templates/merchantbot/partials/footer.html:9
+msgid ""
+"to help maintain and constantly update this tool, keeping it available to "
+"you at all times!"
+msgstr "para ajudar a manter e atualizar constantemente esta ferramenta"
+
+#: duvidas/templates/duvidas/partials/footer.html:13
+#: home/templates/form.html:165 home/templates/index.html:327
+#: merchantbot/templates/merchantbot/partials/footer.html:13
+msgid "Developed by"
+msgstr "Desenvolvido por"
+
+#: duvidas/templates/duvidas/partials/head.html:9
+msgid "Leave a message"
+msgstr "Deixe uma mensagem"
+
+#: home/templates/form.html:9
+#, fuzzy
+#| msgid "Build Generator"
+msgid "Welcome - Build Generator"
+msgstr "Bem vindo - Gerador de Build"
+
+#: home/templates/form.html:18
 msgid ""
 "Want to be notified when you have Rapport Legendary or Wei via Telegram?"
 msgstr ""
 "Quer ser notificado quando tiver Rapport Legendary ou Wei via Telegram?"
 
-#: home/templates/form.html:25
+#: home/templates/form.html:28
 #: merchantbot/templates/merchantbot/partials/content.html:17
 msgid "Get in touch if you have any question."
 msgstr "Entre em contato em caso de duvidas."
 
-#: home/templates/form.html:28
+#: home/templates/form.html:31
+#: merchantbot/templates/merchantbot/partials/content.html:20
 msgid "contact"
 msgstr "contato"
 
-#: home/templates/form.html:47
+#: home/templates/form.html:50
 msgid "Find out how to use our tool!"
 msgstr "Descubra como usar nossa ferramenta!"
 
-#: home/templates/form.html:49
+#: home/templates/form.html:52
 msgid "Welcome to our app for creating engraver builds for Lost Ark!"
 msgstr ""
 "Bem-vindo ao nosso aplicativo para criar builds de engrave automaticamente "
 "para Lost Ark!"
 
-#: home/templates/form.html:50
+#: home/templates/form.html:53
 msgid ""
 "With our tool, you can automatically generate an ideal engraves build for "
 "your character, intelligently distributing the points in accessories, stone "
@@ -108,19 +145,19 @@ msgstr ""
 "acessórios, habilidades de pedra e slots de engraves. Deixe-me explicar como "
 "funciona:"
 
-#: home/templates/form.html:51
+#: home/templates/form.html:54
 msgid "Step 1: Choose your class"
 msgstr "Passo 1: Escolha sua classe"
 
-#: home/templates/form.html:52
+#: home/templates/form.html:55
 msgid "To get started, select your game class."
 msgstr "Para começar, selecione sua classe do jogo."
 
-#: home/templates/form.html:53
+#: home/templates/form.html:56
 msgid "Step 2: Choose combat and class engraves"
 msgstr "Passo 2: Escolher os engraves de combate e classe"
 
-#: home/templates/form.html:54
+#: home/templates/form.html:57
 msgid ""
 "After selecting your class, you will be able to choose from 4 to 5 combat "
 "engravings and up to 2 class."
@@ -128,18 +165,18 @@ msgstr ""
 "Depois de selecionar sua classe, você poderá escolher de 4 a 5 engraves de "
 "combates e até 2 de classe."
 
-#: home/templates/form.html:56
+#: home/templates/form.html:59
 msgid ""
 "*If 6 skills are selected, the last one selected will be the sixth engraver."
 msgstr ""
 "*Se 6 habilidades forem selecionadas, a última selecionada será o sexto "
 "engrave."
 
-#: home/templates/form.html:58
+#: home/templates/form.html:61
 msgid "Step 3: Use the filters for a more accurate calculation (optional)"
 msgstr "Passo 3: Use os filtros para um cálculo mais preciso (opcional)"
 
-#: home/templates/form.html:59
+#: home/templates/form.html:62
 msgid ""
 "For even greater precision in the distribution of engrave points, we offer "
 "filters on the right of the screen. With it, you can define specific "
@@ -153,11 +190,11 @@ msgstr ""
 "de engrave entre diferentes áreas do seu personagem. Esta opção é totalmente "
 "opcional, mas pode ser útil para aprimorar ainda mais sua construção."
 
-#: home/templates/form.html:60
+#: home/templates/form.html:63
 msgid "Step 4: Generate your engraves build"
 msgstr "Passo 4: Gere sua build de engraves"
 
-#: home/templates/form.html:61
+#: home/templates/form.html:64
 msgid ""
 "Once you've made your class choices, combat engraves, and class engraves, "
 "it's time to generate your engraves build. Our system will automatically "
@@ -169,11 +206,11 @@ msgstr ""
 "automaticamente entre os acessórios, pedras de habilidade e slots de "
 "engraving, sem mais sofrimento para criar builds, certo?"
 
-#: home/templates/form.html:62
+#: home/templates/form.html:65
 msgid "Step 5: Edit your build (optional)"
 msgstr "Etapa 5: edite sua build (opcional)"
 
-#: home/templates/form.html:63
+#: home/templates/form.html:66
 msgid ""
 "After the build is generated, you will have the option to make edits if you "
 "are not completely satisfied with the result. You can manually adjust the "
@@ -185,7 +222,7 @@ msgstr ""
 "os pontos em cada acessório, pedra de habilidade ou slot de engraving para "
 "personalizar a construção de acordo com suas preferências."
 
-#: home/templates/form.html:65
+#: home/templates/form.html:68
 msgid ""
 "Our goal is to make the process of creating engraver builds for the Lost Ark "
 "easier and faster, allowing you to get the most out of your character!"
@@ -193,7 +230,7 @@ msgstr ""
 "Nosso objetivo é tornar o processo de criação de builds de Lost Ark mais "
 "fácil e rápido, permitindo que você aproveite ao máximo seu personagem!"
 
-#: home/templates/form.html:68
+#: home/templates/form.html:71
 msgid ""
 "**Our tool is in beta testing phase. If you find any bugs, please report "
 "them to us so we can fix them."
@@ -201,59 +238,41 @@ msgstr ""
 "**Nossa ferramenta está em fase beta de testes. Se você encontrar algum bug, "
 "informe-nos para que possamos corrigi-los."
 
-#: home/templates/form.html:81
+#: home/templates/form.html:84
 msgid "Choose your class:"
 msgstr "Escolha sua classe:"
 
-#: home/templates/form.html:96
+#: home/templates/form.html:99
 msgid "Choose combat engraves:"
 msgstr "Escolha os engraves de combat:"
 
-#: home/templates/form.html:110
+#: home/templates/form.html:113
 msgid "Choose class engraves:"
 msgstr "Escolha os engraves de classe:"
 
-#: home/templates/form.html:126
+#: home/templates/form.html:129
 msgid "Filters:"
 msgstr "Filtros:"
 
-#: home/templates/form.html:130
+#: home/templates/form.html:133
 msgid "Do you have a 9-7 or 7-9 stone?"
 msgstr "Você possui uma pedra 9-7 ou 7-9?"
 
-#: home/templates/form.html:134
+#: home/templates/form.html:137
 msgid "Can the character use ancient itens?"
 msgstr "O seu personagem pode usar itens ancient?"
 
-#: home/templates/form.html:138
+#: home/templates/form.html:141
 msgid "Use two engraving slots with 12 skill points."
 msgstr "Use os dois engravings slots com 12 pontos de habilidade"
 
-#: home/templates/form.html:142
+#: home/templates/form.html:145
 msgid "Prioritize class skill in engrave slot."
 msgstr "Priorize a habilidade de classe no slot de engraving."
 
-#: home/templates/form.html:145
+#: home/templates/form.html:148
 msgid "Generate build"
 msgstr "Gerar build"
-
-#: home/templates/form.html:152
-msgid "Did you find value in this project? Consider"
-msgstr "Você encontrou valor neste projeto? Considere fazer uma"
-
-#: home/templates/form.html:154
-msgid "donate"
-msgstr "doação"
-
-#: home/templates/form.html:156
-msgid ""
-"to help maintain and constantly update this tool, keeping it available to "
-"you at all times!"
-msgstr "para ajudar a manter e atualizar constantemente esta ferramenta"
-
-#: home/templates/form.html:160
-msgid "Developed by"
-msgstr "Desenvolvido por"
 
 #: home/templates/index.html:10
 msgid "Build generated"
@@ -287,11 +306,11 @@ msgstr "Distribuição de Pontos"
 msgid "Accessories"
 msgstr "Acessórios"
 
-#: home/templates/index.html:215
+#: home/templates/index.html:216
 msgid "Ability Stone"
 msgstr "Pedra de Habilidade"
 
-#: home/templates/index.html:243
+#: home/templates/index.html:244
 msgid "Engraving Slots"
 msgstr "Slots de Engraving"
 

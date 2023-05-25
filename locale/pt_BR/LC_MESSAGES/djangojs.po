@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-23 12:07-0300\n"
+"POT-Creation-Date: 2023-05-25 10:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,507 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
 #: merchantbot/static/merchantbot/js/global-js.js:13
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
 msgid ""
-"Here is the link to your server's Telegram group: <br><br><a href='https://"
-"telegram.org/ target='_blank'>Telegram - Adrinne</a>"
-msgstr "Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a href='https://"
-"telegram.org/ target='_blank'>Telegram - Adrinne"
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+bEkDgdInoCwzYjEx' target='_blank'>Telegram - Adrinne</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Adrinne"
 
 #: merchantbot/static/merchantbot/js/global-js.js:16
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
 msgid ""
-"Here is the link to your server's Telegram group: <br><br><a href='https://"
-"telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
-msgstr "Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a href='https://"
-"telegram.org/' target='_blank'>Telegram - Aldebaran"
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+dkOLqjZq94FiMGM5' target='_blank'>Telegram - Aldebaran</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Aldebaran"
+
+#: merchantbot/static/merchantbot/js/global-js.js:19
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+S_WPaKIpfkA4N2Yx' target='_blank'>Telegram - Avesta</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Avesta"
+
+#: merchantbot/static/merchantbot/js/global-js.js:22
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+m3krAkttebpiYzIx' target='_blank'>Telegram - Azena</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Azena"
+
+#: merchantbot/static/merchantbot/js/global-js.js:25
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+9idJvJuQXxQ4ODAx' target='_blank'>Telegram - Danube</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Danube"
+
+#: merchantbot/static/merchantbot/js/global-js.js:28
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+ycUnlkL71ak2OGEx' target='_blank'>Telegram - Elzowin</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Elzowin"
+
+#: merchantbot/static/merchantbot/js/global-js.js:31
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+oIdUcS0ouB4wY2Ux' target='_blank'>Telegram - Galatur</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Galatur"
+
+#: merchantbot/static/merchantbot/js/global-js.js:34
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+zsbkAKwIfbhmMzMx' target='_blank'>Telegram - Karta</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Karta"
+
+#: merchantbot/static/merchantbot/js/global-js.js:37
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+s2idsqohsrQ5YTUx' target='_blank'>Telegram - Kharmine</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Kharmine"
+
+#: merchantbot/static/merchantbot/js/global-js.js:40
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+DskpO6PRVa5kMjc5' target='_blank'>Telegram - Ladon</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Ladon"
+
+#: merchantbot/static/merchantbot/js/global-js.js:43
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+yC9SGqeHgohiYTkx' target='_blank'>Telegram - Regulus</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Regulus"
+
+#: merchantbot/static/merchantbot/js/global-js.js:46
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+W4k9vNYYDBM0NWQx' target='_blank'>Telegram - Sasha</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Sasha"
+
+#: merchantbot/static/merchantbot/js/global-js.js:49
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+3Hepl2zaqAA3NDUx' target='_blank'>Telegram - Una</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Una"
+
+#: merchantbot/static/merchantbot/js/global-js.js:52
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+yhaflmIwy-oyMTcx' target='_blank'>Telegram - Vykas</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Vykas"
+
+#: merchantbot/static/merchantbot/js/global-js.js:55
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+uocQ1W64co40MGEx' target='_blank'>Telegram - Zosma</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Zosma"
+
+#: merchantbot/static/merchantbot/js/global-js.js:58
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+mqrn7uHQwj8xNzEx' target='_blank'>Telegram - Akkan</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Akkan"
+
+#: merchantbot/static/merchantbot/js/global-js.js:61
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+f3xJb5dujz02MThh' target='_blank'>Telegram - Bergstrom</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Bergstrom"
+
+#: merchantbot/static/merchantbot/js/global-js.js:64
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+owEokg0laR1lMjBh' target='_blank'>Telegram - Enviska</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Enviska"
+
+#: merchantbot/static/merchantbot/js/global-js.js:67
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+Bji2aKAZx7dhNjFh' target='_blank'>Telegram - Mari</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Mari"
+
+#: merchantbot/static/merchantbot/js/global-js.js:70
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+vQE0TSZwLq01Zjcx' target='_blank'>Telegram - Rohendel</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Rohendel"
+
+#: merchantbot/static/merchantbot/js/global-js.js:73
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+MjLeQZ8KhUxkZGZh' target='_blank'>Telegram - Shandi</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Shandi"
+
+#: merchantbot/static/merchantbot/js/global-js.js:76
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+y-F5Pa_Sg9pmYTlh' target='_blank'>Telegram - Valtan</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Valtan"
+
+#: merchantbot/static/merchantbot/js/global-js.js:79
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+UspDa6KRiyRlZjFh' target='_blank'>Telegram - Antares</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Antares"
+
+#: merchantbot/static/merchantbot/js/global-js.js:82
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+e6e9Pff_1zhlZWIx' target='_blank'>Telegram - Armen</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Armen"
+
+#: merchantbot/static/merchantbot/js/global-js.js:85
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+YwSt4qXd8LxlYzRh' target='_blank'>Telegram - Asta</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Asta"
+
+#: merchantbot/static/merchantbot/js/global-js.js:88
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+y3R5TiipU-kwMzZh' target='_blank'>Telegram - Calvasus</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Calvasus"
+
+#: merchantbot/static/merchantbot/js/global-js.js:91
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+abTmEYOjzYE3Nzgx' target='_blank'>Telegram - Evergrace</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Evergrace"
+
+#: merchantbot/static/merchantbot/js/global-js.js:94
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+tIMTPXJr23piODYx' target='_blank'>Telegram - Ezrebet</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Ezrebet"
+
+#: merchantbot/static/merchantbot/js/global-js.js:97
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+lVFxatGXryY1ODlh' target='_blank'>Telegram - Kadan</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Kadan"
+
+#: merchantbot/static/merchantbot/js/global-js.js:100
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+pUcE8V1BZIgyMTY5' target='_blank'>Telegram - Lazenith</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Lazenith"
+
+#: merchantbot/static/merchantbot/js/global-js.js:103
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+ypY7oaQMPKw0YWFh' target='_blank'>Telegram - Mokoko</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Mokoko"
+
+#: merchantbot/static/merchantbot/js/global-js.js:106
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+kP3mJDPfnStlN2Qx' target='_blank'>Telegram - Neria</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Neria"
+
+#: merchantbot/static/merchantbot/js/global-js.js:109
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+9wJ3UgjpUfRmNjFh' target='_blank'>Telegram - Slen</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Slen"
+
+#: merchantbot/static/merchantbot/js/global-js.js:112
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+0-HuTaXdQRY0MWRh' target='_blank'>Telegram - Thirain</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Thirain"
+
+#: merchantbot/static/merchantbot/js/global-js.js:115
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+71mn4vc7fFYxODIx' target='_blank'>Telegram - Trixion</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Trixion"
+
+#: merchantbot/static/merchantbot/js/global-js.js:118
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+glgHBuuOYEM1YTcx' target='_blank'>Telegram - Wei</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Wei"
+
+#: merchantbot/static/merchantbot/js/global-js.js:121
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+zD2Uo2cytWwwMWFh' target='_blank'>Telegram - Zinnervale</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Zinnervale"
+
+#: merchantbot/static/merchantbot/js/global-js.js:124
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+WVFz8AbN87o4NGZh' target='_blank'>Telegram - Ealyn</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Ealyn"
+
+#: merchantbot/static/merchantbot/js/global-js.js:127
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+hAemJfr2ZjI0YTgx' target='_blank'>Telegram - Nia</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Nia"
+
+#: merchantbot/static/merchantbot/js/global-js.js:130
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+KUPXWxH9uQc0OTYx' target='_blank'>Telegram - Kazeros</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Kazeros"
+
+#: merchantbot/static/merchantbot/js/global-js.js:133
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/ target='_blank'>Telegram - Adrinne</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+VBhK_okaG-g0ZTAx' target='_blank'>Telegram - Arthetine</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/ target='_blank'>Telegram - Arthetine"
+
+#: merchantbot/static/merchantbot/js/global-js.js:136
+#, fuzzy
+#| msgid ""
+#| "Here is the link to your server's Telegram group: <br><br><a "
+#| "href='https://telegram.org/' target='_blank'>Telegram - Aldebaran</a>"
+msgid ""
+"Here is the link to your server's Telegram group: <br><br><a href='https://t."
+"me/+I6CKFFW6atBjODZh' target='_blank'>Telegram - Blackfang</a>"
+msgstr ""
+"Aqui está o link para o grupo do Telegram do seu servidor: <br><br><a "
+"href='https://telegram.org/' target='_blank'>Telegram - Blackfang"
