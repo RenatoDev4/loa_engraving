@@ -90,6 +90,14 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-family: 'Bungee', sans-serif;
+  justify-content: center;
+}
+
+.abilityContainer label {
+  font-family: 'Bungee', sans-serif;
+  font-size: 0.7rem;
+  width: 100%;
 }
 
 .character_classContainer img,
@@ -102,19 +110,7 @@ body {
   align-items: center;
 }
 
-.abilityContainer label {
-  font-family: 'Bungee', sans-serif;
-  font-size: 0.8rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 100%;
-}
 
-.characterContent {
-  font-family: 'Bungee', sans-serif;
-  display: flex;
-  justify-content: center;
-}
 
 .abilities,
 .class_abilities,
