@@ -114,7 +114,6 @@ body {
   font-family: 'Bungee', sans-serif;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 .abilities,
@@ -612,11 +611,6 @@ footer a:hover {
     flex-direction: column;
   }
 
-  .character_classContainer,
-  .abilityContainer {
-    width: 100px;
-    height: 120px;
-  }
 
   input[type="submit"] {
     padding: 10px 20px;
