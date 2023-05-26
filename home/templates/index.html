@@ -9,7 +9,7 @@
     {% for character in character_class %}
     <title>{% translate "Engravings generated" %} - {{ character }}</title>
     {% endfor %}
-    <link rel="icon" type="image/x-icon" href="/home/fav/favicon.png">
+    <link rel="icon" type="image/x-icon" href="{% static 'home/fav/favicon.png' %}">
     <meta name="description" content="Lost Ark engraving calculator for better equipment planning!">
     <meta name="keywords" content="lost ark, engraving, calculator, planner, tool, easy">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
