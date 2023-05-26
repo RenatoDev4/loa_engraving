@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-25 10:48-0300\n"
+"POT-Creation-Date: 2023-05-26 08:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: duvidas/templates/duvidas/partials/content.html:9
 #: merchantbot/templates/merchantbot/partials/content.html:8
 msgid "Want to generate a build automatically? Just let us know the engraves!"
-msgstr "Quer gerar uma build automaticamente? Basta nos informar as gravações!"
+msgstr "Quer gerar uma build automaticamente? Basta nos informar os engraves!"
 
 #: duvidas/templates/duvidas/pages/confirmacao.html:12
 #: duvidas/templates/duvidas/partials/content.html:12
@@ -105,8 +105,8 @@ msgstr "Deixe uma mensagem"
 #: home/templates/form.html:9
 #, fuzzy
 #| msgid "Build Generator"
-msgid "Welcome - Build Generator"
-msgstr "Bem vindo - Gerador de Build"
+msgid "Lost Ark - Build Generator"
+msgstr "Gerador de Build"
 
 #: home/templates/form.html:18
 msgid ""
@@ -202,7 +202,7 @@ msgid ""
 "no more suffering to create builds, right?"
 msgstr ""
 "Depois de fazer suas escolhas de classe, engraves de combate e de classe, é "
-"hora de gerar sua build. Nosso sistema vai distribuir pontos de gravação "
+"hora de gerar sua build. Nosso sistema vai distribuir pontos de engraving "
 "automaticamente entre os acessórios, pedras de habilidade e slots de "
 "engraving, sem mais sofrimento para criar builds, certo?"
 

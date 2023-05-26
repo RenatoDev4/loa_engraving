@@ -1046,6 +1046,7 @@ form button {
   color: white;
   padding: 8px;
   justify-content: space-between;
+  font-size: 13px;
 }
 
 footer a {

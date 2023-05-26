@@ -299,7 +299,7 @@ for (var ability in abilitiesSum) {
     }
 
     // Substitui o conteúdo do ponto com os elementos atualizados
-    span.innerHTML = abilityName + ' - '  + abilitiesSum[ability] + ' pontos' + ' - ';
+    span.innerHTML = abilityName + ' - '  + abilitiesSum[ability] + ' points' + ' - ';
     span.appendChild(levelText);
   }
 }
