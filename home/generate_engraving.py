@@ -94,6 +94,8 @@ CLASS_ABILITY_LIST = [
     'First Intention',
     'Energy Overflow',
     'Robust Spirit',
+    'Windfury',
+    'Drizzle'
 
 ]
 
