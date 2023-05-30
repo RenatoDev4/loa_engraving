@@ -590,10 +590,10 @@ footer a:hover {
 
 /* CSS para dispotivios moveis */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
 
   body {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   #abilitiesForm {
@@ -676,19 +676,19 @@ footer a:hover {
   }
 
   #rodape {
-    height: 15px;
+    height: 20px;
   }
 
   #rodape p {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .right-content {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .button-lostmerchant {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .botao-container {
@@ -700,10 +700,18 @@ footer a:hover {
   }
 
   .abilityContainer label {
-    font-size: 0.6rem;
+    font-size: 12px;
   }
   
   .characterContent {
-    font-size: 0.7rem;
+    font-size: 12px;
   }
+
+  .character_classContainer,
+  .abilityContainer {
+    width: 80px;
+    height: 120px;
+    margin-left: 30px;
+
+}
 }
